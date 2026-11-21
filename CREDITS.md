@@ -58,3 +58,17 @@ From DuckSaucc's "Mugen Chars" `stages.zip` (https://ducksaucc.itch.io/mugen), 2
 | Obito's_Dimension_Kamui | h | Aloudie and ALXVE |
 | hall_dreams | P | Ranguerus |
 | hueco mundo NEW | T | sage of mugen |
+
+
+## Tilesets and backgrounds (`itch/`), fetched 2026-11-21
+
+| Folder | Pack | Author | Licence | Credit line |
+|---|---|---|---|---|
+| ninja-adventure | Ninja Adventure Asset Pack (pixel-boy.itch.io) | Pixel-Boy and AAA | CC0 1.0 | Ninja Adventure Asset Pack by Pixel-Boy and AAA, CC0 (optional) |
+| lucifer-desert | Lucifer – Desert Tileset (foozlecc.itch.io) | Foozle (artist named as David @chroma_dave on the page, Baldur @the__baldur in the readme) | CC0 | Lucifer Desert Tileset, distributed by Foozle, CC0 (optional) |
+| brown-rock-tileset | Brown Rock Tileset V1 (OpenGameArt) | kodzegura / Mushra Games | OGA-BY 3.0 | **Required:** Brown Rock Tileset by kodzegura / Mushra Games (OpenGameArt), OGA-BY 3.0 |
+| karsiori-mountains | Free Pixel Art Mountains Tileset & Backgrounds (karsiori.itch.io) | karsiori | CC0 (page description) | Mountains Tileset & Backgrounds by karsiori, CC0 (requested) |
+| mountain-at-dusk | Mountain at Dusk (OpenGameArt) | Luis Zuno (ansimuz) | CC0 | Mountain at Dusk by Luis Zuno (ansimuz), CC0 (optional) |
+| rgsdev-topdown-template | Free CC0 Top Down Tileset Template (rgsdev.itch.io) | Raphael Gonçalves (RGS_Dev) | CC0 | none needed |
+
+Each folder keeps the pack's own licence/readme plus `LICENSE-page.txt` with the page's licence wording.

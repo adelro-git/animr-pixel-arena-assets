@@ -1,0 +1,15 @@
+Source page: https://opengameart.org/content/brown-rock-tileset-top-down-rpg-pixel-art  (retrieved 2026-11-21)
+File: brown_rock_tileset_v1.zip (531.6 Kb), served as https://opengameart.org/sites/default/files/brown_rock_tileset_v1_1.zip
+Author (page): Mushra Games  -- bundled Readme.txt: "by kodzegura from Mushra Games"
+Posted: Thursday, April 4, 2024
+
+License(s): OGA-BY 3.0   (link on page: http://opengameart.org/content/oga-by-30-faq)
+Full licence text: http://static.opengameart.org/OGA-BY-3.0.txt
+
+From the OGA-BY 3.0 FAQ (not a legal document):
+"OGA-BY 3.0 is a license based on CC-BY 3.0 that removes that license's restriction on technical
+measures that prevent redistribution of a work."
+"OGA-BY 3.0 explicitly allows content to be relicensed under CC-BY 3.0."
+
+Attribution required. Note: only the free V1 is on OGA under OGA-BY; V2 (roads, animated water)
+is a separate paid itch.io product and is NOT included here.

@@ -1,0 +1,15 @@
+Source page: https://foozlecc.itch.io/lucifer-desert-tileset  (retrieved 2026-11-21)
+File: Foozle_2DT0010_Lucifer_Desert_Tileset_Pixel_Art.zip (131 kB)
+Itch "Asset license" field: Creative Commons Zero v1.0 Universal
+
+Licence text shown on the page:
+"Lucifer Desert Tileset (1.0)
+Commissioned from: David ( https://x.com/chroma_dave )
+Distributed by Foozle (www.foozle.io)
+License: (Creative Commons Zero, CC0)
+http://creativecommons.org/publicdomain/zero/1.0/
+This content is free to use and modify for all projects, including commercial projects.
+Attribution not required.  If you would like to support, consider a voluntary donation."
+
+Note: the bundled Readme.txt names the commissioned artist as Baldur (https://twitter.com/the__baldur);
+the page names David (@chroma_dave). Licence is CC0 in both.

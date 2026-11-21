@@ -1,0 +1,10 @@
+Source page: https://pixel-boy.itch.io/ninja-adventure-asset-pack  (retrieved 2026-11-21)
+File: Ninja Adventure - Asset Pack.zip (89 MB, update #8, Mar 29 2026)
+Itch "Asset license" field: Creative Commons Zero v1.0 Universal
+
+Licence text shown on the page:
+"They are released under the Creative Commons Zero (CC0) license.
+You can use any and all of the assets found in this package in your own games,
+even commercial ones. Attribution is not required but appreciated.
+Placing a link to this itchio page somewhere would be awesome :)
+Made by Pixel-Boy and AAA"
