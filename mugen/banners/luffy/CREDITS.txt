@@ -1,0 +1,3 @@
+Painted cut-in banners from the Zbro Fighters pack (https://zbro-entertainment.itch.io/zbro-fighters),
+character folder mugen-1.1b1/chars/Luffy_Gear4th_v5 (Luffy_TS.sff, SFF group 9000). The .def names no author.
+base.png = 9000,4 · base_alt.png = 9000,3 · gear4_snakeman.png = 9000,12 · gear4_tankman.png = 9000,14 · nightmare.png = 9000,11

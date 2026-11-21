@@ -72,3 +72,8 @@ From DuckSaucc's "Mugen Chars" `stages.zip` (https://ducksaucc.itch.io/mugen), 2
 | rgsdev-topdown-template | Free CC0 Top Down Tileset Template (rgsdev.itch.io) | Raphael Gonçalves (RGS_Dev) | CC0 | none needed |
 
 Each folder keeps the pack's own licence/readme plus `LICENSE-page.txt` with the page's licence wording.
+
+
+## Sourced cut-in banners (`mugen/banners/`), 2026-11-21
+
+Painted cut-in banners taken from other characters in the Zbro Fighters pack (zbro-entertainment.itch.io/zbro-fighters) to fill cut-in gaps; per-folder `CREDITS.txt` gives the source character and sprite numbers. Luffy (Luffy_Gear4th_v5, author not named), Tanjiro (Tanjiro, by Entah99), Naruto (Naruto_Baryon, by Salah).
