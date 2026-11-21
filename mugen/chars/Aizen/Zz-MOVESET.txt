@@ -1,0 +1,85 @@
+
+A - Combo 1
+
+B - Combo 2
+
+C - Clone
+
+C (Hogyoku Mode) - Ball Throw
+
+C (Final Form) - Dark Wave
+
+S - Power Charge
+
+
+
+SPECIALS:
+
+
+Base Form:
+
+D,DF,F,a - Danku
+
+D,DB,B,a - Kyouka Suigetsu Counter
+
+D,DF,F,b - Raikohou
+
+D,DB,B,b - Rikujokoro
+
+D,DF,F,c - Consecutive Slashing
+
+D,DB,B,c - Complete Hypnosis
+
+D+a - Hogyoku Mode
+
+
+Hogyoku Mode:
+
+D,DF,F,a - Reatsu Crushing
+
+D,DB,B,a - Multi Balls Attacks
+
+D,DF,F,b - Kurohitsugi
+
+D,DB,B,b - ThunderBoalts
+
+D,DF,F,c - Swallow Ground
+
+D,DB,B,c - Time Slowing
+
+D+a - Final Form
+
+D+s - Base Form
+
+
+Final Form:
+
+D,DF,F,a - Rushing Crusher
+
+D,DB,B,a - Paralysis Vibrations
+
+D,DF,F,b - Multi Explosions
+
+D,DB,B,b - Souls Torture
+
+D,DF,F,c - Shadow Waves
+
+D,DB,B,c - Shells Inevitables
+
+D+s - Hogyoku Mode
+
+
+SUPERS:
+
+
+Base Form:
+
+x - Kurohitsugi
+
+Hogyoku Mode:
+
+x - Perfect Kurohitsugi
+
+Final Form:
+
+x - Big Bang Explosion
