@@ -1,0 +1,30 @@
+;***************************************************************************;
+;******************* Created in Fighter Factory Ultimate *******************;
+;*******************      http://www.virtualltek.com     *******************;
+;***************************************************************************;
+
+[Info]
+name ="Sasuke"
+displayname ="Sasuke"
+versiondate =12/01/2020
+mugenversion =1.0
+author ="Trator"
+pal.defaults =1
+
+[Files]
+sprite =Sasuke SusanoO.sff
+anim =Sasuke SusanoO.air
+sound =Sasuke SusanoO.snd
+cmd =Sasuke SusanoO.cmd
+cns =Sasuke SusanoO.cns
+stcommon =common1.cns
+st =Sasuke SusanoO.cns
+pal1=1.act
+st1=IA.cns
+st2=Skills.cns
+st3=Ultimate.cns
+st4=Misc.cns
+
+[Arcade]
+intro.storyboard = 
+ending.storyboard = 
