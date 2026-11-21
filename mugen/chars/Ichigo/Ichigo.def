@@ -1,0 +1,31 @@
+;***************************************************************************;
+;******************* Created in Fighter Factory Ultimate *******************;
+;*******************      http://www.virtualltek.com     *******************;
+;***************************************************************************;
+
+[Info]
+name ="Ichigo Kurosaki"
+displayname ="Ichigo"
+versiondate =17/07/2017
+mugenversion =1.0
+author ="AkashiMugen"
+pal.defaults =1
+
+[Files]
+sprite =Ichigo.sff
+anim =Ichigo.air
+sound =Ichigo.snd
+cmd =Ichigo.cmd
+cns =Ichigo.cns
+stcommon =common1.cns
+st =Ichigo.cns
+pal1=1.act
+st1=IA.cns
+st2=Especiales.cns
+st3=Supers.cns
+st4=Bankai.cns
+st5=HalfMask.cns
+
+[Arcade]
+intro.storyboard = 
+ending.storyboard = 
