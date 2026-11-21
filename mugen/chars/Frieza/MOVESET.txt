@@ -1,0 +1,62 @@
+
+A - Punch
+
+B - Tail Flip
+
+Down + B - Psyquic Move
+
+C - Finger Shot
+
+S - Power Charge
+
+SPECIALS:
+
+D,DF,F,a - Death Beam
+
+D,DB,B,a - Next time You'll die
+
+D,DF,F,b - Earth Breaker
+
+D,DB,B,b - Telekinetic Rocks
+
+D,DF,F,c - Nova Strike
+
+D,DB,B,c - Death Saucer
+
+SUPER: 
+
+D,DF,F,a+b - Death Ball
+
+D,DF,F,b+c - Death Psycho Bomb
+
+Ultimate:
+
+D,DF,F,D,DF,F,a+b - You Must Die By My Hand!
+
+
+Transformations:
+
+Z - Golden Frieza
+
+
+SPECIALS:
+
+D,DF,F,a - Death Beam x3
+
+D,DB,B,a - Crazy Finger Shot
+
+D,DF,F,b - Emperor's Edge
+
+D,DB,B,b - Death Jail
+
+D,DF,F,c - Emperor's Death Beam
+
+D,DB,B,c - Death Slicer
+
+SUPER: 
+
+D,DF,F,a+b - Golden Death Ball
+
+Ultimate:
+
+D,DF,F,D,DF,F,a+b - Earth Crusher
