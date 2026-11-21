@@ -1,0 +1,33 @@
+[Info]
+name ="Sukuna Heian"
+displayname ="Sukuna Heian"
+versiondate =11/09/2024
+mugenversion =1.1
+author ="jonhny6969" ;DARKNIGHT,INSEPH,AIKIJINXX,Dr.Animation
+pal.defaults =1
+
+[Remap]
+x = x
+y = y
+z = z
+a = a
+b = b
+c = c
+s = s
+[Files]
+sprite =sff.sff
+anim =air.air
+sound =snd.snd
+cmd =cmd.cmd
+cns =cns.cns
+stcommon =common1.cns
+st =cns.cns
+pal1=1.act
+st1=IA.cns
+st2=Specials.cns
+st3=Supers.cns
+
+[Arcade]
+intro.storyboard = 
+ending.storyboard = 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
