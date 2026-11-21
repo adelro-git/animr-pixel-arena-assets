@@ -1,0 +1,30 @@
+;***************************************************************************;
+;******************* Created in Fighter Factory Ultimate *******************;
+;*******************      http://www.virtualltek.com     *******************;
+;***************************************************************************;
+
+[Info]
+name = "Killua Zoldyck"
+displayname = "Killua"
+versiondate = 26/07/2019
+mugenversion = 1.0
+author = "Mikel8888, Edit by Salah"
+pal.defaults = 1
+
+[Files]
+sprite = Killua.sff
+anim = Killua.air
+sound = Killua.snd
+cmd = Killua.cmd
+cns = Killua.cns
+stcommon = common1.cns
+st = Killua.cns
+st1 = IA.cns
+st2 = Especiales.cns
+st3 = Supers.cns
+st4 = Kanmuru.cns
+pal1 = 1.act
+
+[Arcade]
+intro.storyboard = 
+ending.storyboard = 

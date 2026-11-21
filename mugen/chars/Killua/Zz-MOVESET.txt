@@ -1,0 +1,58 @@
+
+A - Combo 1
+
+B - Combo 2
+
+C - Thunder
+
+C (Kanmuru) - Kanmuru Speed Dash
+
+S - Power Charge
+
+
+
+SPECIALS:
+
+
+D,DF,F,a - Izutsuchi
+
+D,DB,B,a - Killer Counter
+
+D,DF,F,b - The Snake Awakens
+
+D,DB,B,b - Silent Kill
+
+D,DF,F,c - Narukami
+
+D,DB,B,c - Speed Attacks
+
+D,s - Kanmuru
+
+
+Kanmuru:
+
+D,DF,F,a - Kanmuru Izutsuchi
+
+D,DB,B,a - Kanmuru Counter
+
+D,DF,F,b - Kanmuru Impact
+
+D,DB,B,b - Shooting Rayos
+
+D,DF,F,c - Narukami Impact
+
+D,DB,B,c - Narukami Rayos
+
+D,s - Kanmuru Cancel
+
+
+SUPERS:
+
+
+Base:
+
+x - Fatal Assassination
+
+Kanmuru:
+
+x - Super Kanmuru Impact
