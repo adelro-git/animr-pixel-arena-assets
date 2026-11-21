@@ -1,0 +1,13 @@
+[info]
+name = "Tanjiro"
+mugenversion = 1.1       ; [Char Academy - Version 17.10.22]
+author = "InSeph"        ; Original char by: [PetaMynx]
+
+[files]
+anim = .src/anim.air
+cmd = .src/cmd.cmd
+cns = .src/main.cns
+sound = .src/snd.snd
+sprite = .src/spr.sff
+stcommon = .src/source.cns
+st = .src/main.cns
