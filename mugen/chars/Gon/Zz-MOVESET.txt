@@ -1,0 +1,36 @@
+
+A - Combo 1
+
+B - Combo 2
+
+C - Jajanken Pa
+
+S - Power Charge
+
+COMBOS:
+
+a,a - Combo 1
+
+b,b - Combo 2
+
+a,b - Aerial
+
+a,a,b,b,a,b - Full
+
+SPECIALS:
+
+D,DF,F,a - Jajanken Pa
+
+D,DB,B,a - Push
+
+D,DF,F,b - Jajanken Chi
+
+D,DB,B,b - Cane Catch
+
+D,DF,F,c - Jajanken Gu
+
+D,DB,B,c - Murderous Anger
+
+SUPER: 
+
+x - Contract: Sacrifice Talent for Power (can no longer used Nen-based attacks after use)
