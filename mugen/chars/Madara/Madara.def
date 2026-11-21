@@ -1,0 +1,34 @@
+;***************************************************************************;
+;******************* Created in Fighter Factory Ultimate *******************;
+;*******************      http://www.virtualltek.com     *******************;
+;***************************************************************************;
+
+[Info]
+name ="Madara"
+displayname ="Madara"
+versiondate =18/04/2019
+mugenversion =1.0
+author ="Mikel8888"
+pal.defaults =1,2
+
+[Files]
+sprite =Madara.sff
+anim =Madara.air
+sound =Madara.snd
+cmd =Madara.cmd
+cns =Madara.cns
+stcommon =common1.cns
+st =Madara.cns
+pal1=1.act
+pal2=2.act
+st1=IA.cns
+st2=S.Skills.cns
+st3=Specials.cns
+st4=Supers.cns
+st5=Kyubi.cns
+st6=Susanoo.cns
+st7=KyubiSusanoo.cns
+
+[Arcade]
+intro.storyboard = 
+ending.storyboard = 

@@ -1,0 +1,82 @@
+
+A - Combo 1
+
+Down + A - Katon Goenka / Katon Gokakyu no Jutsu(Air)
+
+B - Combo 2
+
+Down + B - Uchihagaeshi
+
+C - Susanoo Combo
+
+Down + C - Susanoo Double Slash
+
+S - Power Charge
+
+Down + S - Perfect Susanoo // Kyubi Susanoo(Needs Nearness)
+
+SPECIALS:
+
+D,DF,F,a - Katon Ryuen Hoka no Jutsu
+
+D,DB,B,a - Katon Goka Mekkyaku
+
+D,DF,F,b - Mokuton Hijutsu: Yukai Kotan
+
+* A - Infernal Forest
+
+* B - Kajukai Korin
+
+D,DB,B,b - Fujutsu Kyuin
+
+D,DF,F,c - Yasaka no Magatama
+
+D,DB,B,c - Kuchiyose Kyubi // Kyubi Control(Needs Nearness)
+
+F,DF,D,DB,B,c - Kuchiyose Gedo Mazo
+
+SUPER: 
+
+D,DF,F,D,DF,F,a+b - Tengai Shinsei
+
+KYUBI CONTROLED:
+
+A - Stomp
+
+B - Bijuudama
+
+Down + A - Kyubi Wave
+
+Down + B - Kyubi Roar
+
+PERFECT SUSANOO:
+
+A - Punch
+
+B - Stomp
+
+C - Slash
+
+PERFECT SUSANOO SPECIALS:
+
+D,DF,F,a - Susanoo Cataclism
+
+D,DF,F,b - Susanoo Storm
+
+D,DF,F,c - Chibaku Tensei
+
+KYUBI SUSANOO:
+
+A - Stomp
+
+B - Susanoo Sword
+
+C - Bijuudama
+
+KYUBI SUSANOO:
+
+D,DF,F,a - Kyubi Streamroller
+
+D,DF,F,b - Kyubi Storm
+
+D,DF,F,c - Kyoso Enbu
