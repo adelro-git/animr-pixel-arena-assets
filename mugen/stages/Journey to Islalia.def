@@ -1,0 +1,143 @@
+
+;=============================================================
+[Info]
+name 		= "Journey to Islalia"
+displayname 	= "_"
+mugenversion 	= 1.1
+author 		= "AceMillion"
+
+[Camera]
+startx = 0
+starty = 0
+boundleft = -170
+boundright = 170
+boundhigh = -1000
+boundlow = -25
+tension = 100
+zoomout = .7
+zoomin = 1.4
+
+[PlayerInfo]
+;--- Player 1 ---
+ ;Player 1 starting coordinates.
+p1startx = -300         ;Starting x coordinates
+p1starty = 0            ;Starting y coordinates
+p1facing = 1            ;Direction player faces: 1=right, -=left
+
+;--- Player 2 ---
+p2startx = 300
+p2starty = 0
+p2facing = -1
+
+;--- Player 3 ---
+p3startx = -400
+p3starty = 0
+p3facing = 1
+
+;--- Player 4 ---
+p4startx = 400
+p4starty = 0
+p4facing = -1
+
+;--- Common ---
+leftbound  = -4000 ;Left bound (x-movement)
+rightbound =  4000 ;Right bound
+
+[Bound]
+screenleft = 15   ;Dist from left of screen that player can move to
+screenright = 15   ;Right edge
+
+[StageInfo]
+zoffset = 1000
+autoturn = 1
+resetBG = 0
+localcoord = 1875,1875
+
+
+
+[Shadow]
+color = 256,256,256    
+intensity = 150
+y.scale = .3                    
+ 
+
+[Music]
+bgmusic 	= sound/Journey to Islalia.mp3
+bgvolume 	= 255
+
+[BGdef]
+spr 		= stages/Journey to Islalia.sff
+debugbg 	= 0
+
+
+
+[BG image]
+type  		= normal
+spriteno 	= 0,0
+start 		= 0,965
+delta 		= 1,1
+mask = 1
+layerno = 0
+
+[BG image]
+type  		= normal
+spriteno 	= 0, 5
+start 		= 0,965
+delta 		= 1,1
+mask = 1
+layerno = 0
+
+
+
+[BG image]
+type  		= normal
+spriteno 	= 0, 12
+start 		= 0,965
+delta 		= 1,1
+mask = 1
+layerno = 0
+
+
+
+[BG image]
+type  		= normal
+spriteno 	= 0, 13
+start 		= 0,965
+delta 		= 1,1
+mask = 1
+layerno = 0
+
+[BG image]
+type  		= normal
+spriteno 	= 0, 14
+start 		= 0,965
+delta 		= 1,1
+mask = 1
+layerno = 0
+
+
+[BG image]
+type  		= normal
+spriteno 	= 0, 15
+start 		= 0,965
+delta 		= 1,1
+mask = 1
+layerno = 0
+
+
+[BG image]
+type  		= ANIM
+actionno 	= 2
+start 		= 0,965
+delta 		= 1,1
+mask = 1
+layerno = 0
+
+[Begin Action 2]
+2,0, 0,0, 4, , A
+2,1, 0,0, 4, , A
+2,2, 0,0, 4, , A
+2,3, 0,0, 4, , A
+2,3, -984,-48, 4, H, A
+2,3, -16,-64, 4, , A
+

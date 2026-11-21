@@ -18,3 +18,43 @@
 | `mugen/chars/Deku` | Izuku Midoriya (Deku) | Rivelio, edited by TrafalgarLawzz | DuckSaucc `Deku.zip` — https://ducksaucc.itch.io/mugen |
 | `mugen/chars/ZoroRoronoa` | Roronoa Zoro (SFF v1, 2002) | Author not named in the files (Spanish-language release notes in Zoro_publlicación.txt) | Zbro Fighters — https://zbro-entertainment.itch.io/zbro-fighters |
 | `mugen/chars/Sukuna Heian` | Ryomen Sukuna (Heian form, about 84 px tall) | jonhny6969; credits DARKNIGHT, INSEPH, AIKIJINXX, Dr.Animation | Zbro Fighters — https://zbro-entertainment.itch.io/zbro-fighters |
+
+
+## Stages (`mugen/stages/`)
+
+From DuckSaucc's "Mugen Chars" `stages.zip` (https://ducksaucc.itch.io/mugen), 2026-11-21. Authors from each stage's `.def` (`author` field; "unknown" where the file names none). Music: `sound/` holds the Dragon Ball stages' tracks (Cell_Games, Namek, Desert Rocks, Janemba) as shipped in the pack. Daigo_Temple (99 MB) was left out.
+
+| Stage | .def name | Author |
+|---|---|---|
+| Boring Cave | Ace | AceMillion |
+| Castle Town | I | Vendigo |
+| Cell_Games | DBFZ Cell Game | jafar |
+| Chouhan | $ | Alice |
+| ColossalTitan | Colossal Titan Appears | MarkPachi |
+| Corrida_Coliseu | Coliseo_Corrida | Daniel's  |
+| CyberCityVP | q | unknown |
+| Death | Death | AceMillion |
+| Desert Rocks | > | DooM |
+| Dojo | } | unknown |
+| Enjou | A | Alice |
+| Epic-world | Epic-world | Soknasful     |
+| Examen_Chunin_Final_HR2 | L | ALXVE |
+| Express to Death | W | unknown |
+| Hidden Entrance | Hidden Entrance | AceMillion |
+| Hunter_Night_Field | Y | unknown |
+| Igniz | v | unknown |
+| Infinity fortress | r | sage of mugen |
+| Janemba | Janemba's Hell | unknown |
+| Journey to Islalia | Journey to Islalia | AceMillion |
+| Keirin_Risui | y | Alice |
+| Konoha_Destroyed | Konoha_Destroyed | Darek |
+| Koroukan | # | Alice |
+| LoneBlue | V | Lith Flower |
+| Market | ! | Alice |
+| Moonlit_Battlefield_NSUNS4 | b | unknown |
+| Mountainpath | P | suigin |
+| NPB_Rooftop | c            | Excahm |
+| Namek | Namek | Blackscale299 |
+| Obito's_Dimension_Kamui | h | Aloudie and ALXVE |
+| hall_dreams | P | Ranguerus |
+| hueco mundo NEW | T | sage of mugen |

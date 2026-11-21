@@ -1,0 +1,150 @@
+;[Links]:==============================================================
+;
+;MugenPlanet.com - We Help The Mugen Community Grow
+;DMdesign.pl - my design studio
+;
+ [Info];===============================================================
+;
+ name            = "W"
+;author          = DooM
+mugenversion         = 1.1
+;release date    = 10.04.09
+;hi-res?           YES
+;super jump?       KINDA
+;animated?         NO
+;audio included?   YES (Environment)
+;
+;[Author's Comments];==================================================
+;
+;Stage sprites originally come from 
+;"Capoeira Fighter 3 - Ultimate World Tournament" game.
+;They have just been modified and programmed into Mugen by me.
+;
+;What exactly I did besides the programming and general work?
+;
+;- Added some light effects.
+;
+;If you enjoy the stage, go and buy CF3 game. It's really great!
+;
+;http://www.spiritonin.com/capoeirafighter/
+;
+;----------------------------------------------------------------------
+;[IMPORTANT]
+;
+;If you're having some audio problems, just go to mugen.CFG located
+;in your Mugen/data folder. Then just find a row which says "[Sound Win]"
+;or [Sound Linux] depending on which OS you have.
+;
+;Paste there this piece of text:
+;
+;----------------------------------------------------------------------
+;----------------------------------------------------------------------
+;
+;Now you just have to find those plugins by yourself. I'm not
+;a software pirate, so I can't really give them to ya.
+;
+;======================================================================
+; Contact: doom@mugenplanet.com
+;======================================================================
+
+[Camera];--------------------------------------------------------------
+startx = 0
+starty = 0
+
+boundleft = -25
+boundright = 25
+
+boundhigh = -50
+boundlow = 0
+tension = 50
+zoomout = .92
+zoomin = 1.4
+
+[PlayerInfo];----------------------------------------------------------
+
+p1startx = -70
+p1starty = 0
+p1startz = 0
+p1facing = 1
+
+p2startx = 70
+p2starty = 0
+p2startz = 0
+p2facing = -1
+
+leftbound  = -1000
+rightbound =  1000
+topbound  =  0
+botbound  =  0
+
+[Scaling];-------------------------------------------------------------
+
+topz     = 0
+botz     = 50
+topscale = 1
+botscale = 1.2
+
+[Bound];---------------------------------------------------------------
+
+screenleft = 15
+screenright = 15
+
+[StageInfo];-----------------------------------------------------------
+
+zoffset = 216
+autoturn = 1
+resetBG = 1
+hires = 1
+
+[Shadow];--------------------------------------------------------------
+
+intensity = 256
+color = 0,93,93
+yscale = 0.3
+fade.range = 80,20
+
+[Reflection];----------------------------------------------------------
+
+intensity = 0
+
+[Music];---------------------------------------------------------------
+
+bgmusic = sound/Express to Death.mp3
+bgvolume = 255
+
+; Random wind
+
+[BGdef];---------------------------------------------------------------
+
+spr = stages/Express to Death.sff
+debugbg = 0
+
+;======================================================================
+
+[BG Red]
+type = normal
+spriteno = 0,0
+layerno = 0
+start = 0,-45
+delta = 2,2
+mask = 0
+
+[BG Green]
+type = normal
+spriteno = 0,1
+layerno = 0
+start = 0,-45
+delta = 2,2
+trans = add
+mask = 0
+
+[BG Blue]
+type = normal
+spriteno = 0,2
+layerno = 0
+start = 0,-45
+delta = 2,2
+trans = add
+mask = 0
+
+;======================================================================

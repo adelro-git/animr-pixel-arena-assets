@@ -1,0 +1,533 @@
+; Definition of stage 0 (training stage)
+; *** denotes values you should change/check for each stage.
+; The term "background" is used to mean both backgrounds and foregrounds.
+
+;--------------------------------------------------------
+[Info]
+ ;Name of the stage.
+name = "L"
+authorname = "ALXVE"
+
+;--------------------------------------------------------
+[Camera]
+startx 	= 0
+starty 	= 0
+boundleft 	= -165
+boundright 	= 165
+boundhigh 	= 0
+boundlow 	= 0
+verticalfollow = 1.1
+tension = 100
+zoomin 		= 1.15
+zoomout		= .3
+
+[PlayerInfo]
+p1startx 	= -900
+p1starty 	= 0
+p1facing 	= 1
+p2startx 	= 900
+p2starty 	= 0
+p2facing 	= -1
+p3startx 	= -400
+p3starty 	= 0
+p3facing 	= 1
+p4startx 	= 400
+p4starty 	= 0
+p4facing 	= -1
+leftbound 	= -4000
+rightbound 	= 4000
+
+[Bound]
+screenleft 	= 60
+screenright 	= 60
+
+[StageInfo]
+zoffset 	= 615.0
+autoturn 	= 1
+resetBG 	= 0
+localcoord 	= 1280, 720
+xscale 		= 1.2
+yscale 		= 1.1
+
+[Scaling]
+topz     	= 0
+botz     	= 50
+topscale 	= 1
+botscale 	= 1.2
+
+[Shadow]
+color 		= 0,0,0
+yscale 		= .2
+
+;--------------------------------------------------------
+[Reflection]
+ ;Intensity of reflection (from 0 to 256). Set to 0 to have no
+ ;reflection. Defaults to 0.
+intensity = 0
+
+;--------------------------------------------------------
+[Music]
+
+bgmusic = sound/Examen_Chunin_Final_HR2.mp3
+bgvolume = 255
+
+;========================================================
+;--------------------------------------------------------
+; Background definition
+; ***
+;-------------------------------------
+; [BG x]
+; type = ?       "Normal"/"Parallax"  (def: "normal")
+; spriteno = ?, ? Sprite group and number: groupno, imgno  (req'd)
+; start = ?, ?   Starting location (integer)  (def: 0, 0)
+; delta = ?, ?   Change in location per camera unit moved (float)  (def: 1,1)
+; trans = ?      Transparency settings: "none"/"add"/"add1"/"sub"" (def: "none")
+; mask = ?       Masking (int): 0 - off, 1 - on  (def: 0)
+; velocity = ?, ? Velocity: x, y (float): speed background moves (def: 0, 0)
+; tile = ?, ?    Tiling: xtile, ytile (int): 0 - off, 1 - infinite,
+;                        >1 - tile that number of times  (def: 0, 0) - only for Normal BG
+; tilespacing = ?, ? Tiling: x, y (int) : space between tiles (def: 0, 0)
+;  Parallax-only:
+; xscale = ?, ?    Top xscale, bottom xscale (float)
+; width = ?, ?     Top width, bottom width (int)  (use either this or above, but not both)
+; yscalestart = ?  Starting y-scale (float, in percent)  (def: 100)
+; yscaledelta = ?  Change in y-scale per unit (float, in percent)  (def: 0)
+;-------------------------------------
+
+;-------------------------------------
+; Main background definition
+[BGdef]
+ ;Filename of sprite data
+spr = Examen_Chunin_Final_HR2.sff
+
+ ;Set to 1 if you want to clear the screen to magenta before
+ ;drawing layer 0 (the default background). Good for spotting "holes"
+ ;in your background.
+ ;Remember to turn this off when you are done debugging the background,
+ ;because it slows down performance.
+debugbg = 0
+
+
+;----------
+[BG 5 Sky ]
+type  = normal
+spriteno = 1,4
+layerno = 0
+start = 0,-420
+delta = .6,.6
+;delta = .3,.6
+tile = 1,0
+Velocity = -0.35, 0
+tilespacing = -1,0
+
+[BG edificio]
+type = Normal
+spriteno = 1,0
+start = 0,-418
+delta = 1, .97
+Layerno = 0
+mask = 1
+
+[BG piso]
+type = Parallax
+spriteno = 1,1
+start = 0,-420
+mask = 1
+delta = 1, .97
+xscale = 1, 1
+yscaledelta = .4
+yscalestart = 100
+
+
+[BG 0, Front Trees Anim 1]
+Type = Anim
+ActionNO = 3
+Mask = 1
+start = 0,-420
+delta = 1, .97
+
+[BG 0, Front Trees Anim 2]
+Type = Anim
+ActionNO = 4
+Mask = 1
+start = 0,-420
+delta = 1, .97
+
+[BG 0, Front Trees Anim 3]
+Type = Anim
+ActionNO = 5
+Mask = 1
+start = 0,-420
+delta = 1, .97
+
+[BG 0, Front Trees Anim 4]
+Type = Anim
+ActionNO = 2
+Mask = 1
+start = 0,-420
+delta = 1, .97
+
+[BG 0, Front Bush 1]
+Type = Anim
+ActionNO = 6
+Mask = 1
+start = 0,-420
+delta = 1, .97
+
+[BG 0, Little Bush 1]
+Type = Anim
+ActionNO = 10
+Mask = 1
+start = 0,-420
+delta = 1, .97
+
+[BG 0, Plant Anim 1]
+Type = Anim
+ActionNO = 14
+Mask = 1
+start = 0,-420
+delta = 1, .97
+
+[BG 0, Plant Anim 2]
+Type = Anim
+ActionNO = 15
+Mask = 1
+start = 0,-420
+delta = 1, .97
+
+;  F Tree Anim 1
+[Begin Action 2]
+2,0, 0,0, 7
+2,1, 0,0, 7
+2,2, 0,0, 7
+2,3, 0,0, 7
+2,4, 0,0, 7
+2,5, 0,0, 7
+2,6, 0,0, 7
+2,7, 0,0, 7
+2,8, 0,0, 7
+2,9, 0,0, 7
+2,10, 0,0, 7
+2,11, 0,0, 7
+2,12, 0,0, 7
+2,13, 0,0, 7
+2,14, 0,0, 7
+2,15, 0,0, 7
+2,16, 0,0, 7
+2,17, 0,0, 7
+2,18, 0,0, 7
+2,19, 0,0, 7
+
+;  F Tree Anim 2
+[Begin Action 3]
+3,0, 0,0, 7
+3,1, 0,0, 7
+3,2, 0,0, 7
+3,3, 0,0, 7
+3,4, 0,0, 7
+3,5, 0,0, 7
+3,6, 0,0, 7
+3,7, 0,0, 7
+3,8, 0,0, 7
+3,9, 0,0, 7
+3,10, 0,0, 7
+3,11, 0,0, 7
+3,12, 0,0, 7
+3,13, 0,0, 7
+3,14, 0,0, 7
+3,15, 0,0, 7
+3,16, 0,0, 7
+3,17, 0,0, 7
+3,18, 0,0, 7
+3,19, 0,0, 7
+
+;  F Tree Anim 3
+[Begin Action 4]
+4,0, 0,0, 6
+4,1, 0,0, 6
+4,2, 0,0, 6
+4,3, 0,0, 6
+4,4, 0,0, 6
+4,5, 0,0, 6
+4,6, 0,0, 6
+4,7, 0,0, 6
+4,8, 0,0, 6
+4,9, 0,0, 6
+4,10, 0,0, 6
+4,11, 0,0, 6
+4,12, 0,0, 6
+4,13, 0,0, 6
+4,14, 0,0, 6
+4,15, 0,0, 6
+4,16, 0,0, 6
+4,17, 0,0, 6
+4,18, 0,0, 6
+4,19, 0,0, 6
+
+;  F Tree Anim 4
+[Begin Action 5]
+5,0, 0,0, 6
+5,1, 0,0, 6
+5,2, 0,0, 6
+5,3, 0,0, 6
+5,4, 0,0, 6
+5,5, 0,0, 6
+5,6, 0,0, 6
+5,7, 0,0, 6
+5,8, 0,0, 6
+5,9, 0,0, 6
+5,10, 0,0, 6
+5,11, 0,0, 6
+5,12, 0,0, 6
+5,13, 0,0, 6
+5,14, 0,0, 6
+5,15, 0,0, 6
+5,16, 0,0, 6
+5,17, 0,0, 6
+5,18, 0,0, 6
+5,19, 0,0, 6
+
+;  Front Bush Anim 1
+[Begin Action 6]
+8,0, 0,0, 3
+8,1, 0,0, 3
+8,2, 0,0, 3
+8,3, 0,0, 3
+8,4, 0,0, 3
+8,5, 0,0, 3
+8,6, 0,0, 3
+8,7, 0,0, 3
+8,8, 0,0, 3
+8,9, 0,0, 3
+8,10, 0,0, 3
+8,11, 0,0, 3
+8,12, 0,0, 3
+8,13, 0,0, 3
+8,14, 0,0, 3
+8,15, 0,0, 3
+8,16, 0,0, 3
+8,17, 0,0, 3
+8,18, 0,0, 3
+8,19, 0,0, 3
+
+;  Little Bush 1
+[Begin Action 10]
+10,0, 0,0, 5
+10,1, 0,0, 5
+10,2, 0,0, 5
+10,3, 0,0, 5
+10,4, 0,0, 5
+10,5, 0,0, 5
+10,6, 0,0, 5
+10,7, 0,0, 5
+
+;  Plant 1
+[Begin Action 14]
+14,0, 0,0, 5
+14,1, 0,0, 6
+14,2, 0,0, 5
+14,3, 0,0, 6
+14,4, 0,0, 5
+14,5, 0,0, 6
+14,6, 0,0, 5
+14,7, 0,0, 6
+
+;  Plant 2
+[Begin Action 15]
+15,0, 0,0, 4
+15,1, 0,0, 3
+15,2, 0,0, 4
+15,3, 0,0, 3
+15,4, 0,0, 4
+15,5, 0,0, 3
+15,6, 0,0, 4
+15,7, 0,0, 3
+
+[BG sombra]
+type = Normal
+spriteno = 1,3
+start = 0,-240
+Layerno = 0
+mask = 1
+delta = 1,.6
+tile = 1,0
+Velocity = -0.7, 0
+tilespacing = 0,0
+
+[BG sombra]
+type = Normal
+spriteno = 1,3
+start = 0,-240
+Layerno = 0
+mask = 1
+delta = 1,.6
+tile = 1,0
+Velocity = -0.7, 0
+tilespacing = 0,0
+
+[BG 6 Bird 01]
+type  		= anim
+actionno 	= 66
+start 		= 1000, -310
+delta 		= .9, .9
+sin.y           = 4,90,0
+id              = 6
+
+[BG 6 Bird 02]
+type  		= anim
+actionno 	= 77
+start 		= 1130, -300
+delta 		= .9, .9
+sin.y           = 6,110,0
+id              = 6
+
+[BGCtrlDef 6 Birds]
+ctrlID          = 6
+looptime        = 1800
+
+[BGCtrl]
+type            = Velset
+time            = 100
+x               = -3
+
+[BGCtrl]
+type            = Velset
+time            = 1800
+x               = 0
+
+[BGCtrl]
+type            = PosSet
+time            = 1500
+x               = 1300
+y               = 0
+
+;Anim bird 01
+[Begin Action 66]
+66,1, 0,0, 2
+66,2, 0,0, 2
+66,3, 0,0, 2
+66,4, 0,0, 2
+66,5, 0,0, 2
+66,6, 0,0, 2
+66,7, 0,0, 2
+66,8, 0,0, 2
+66,9, 0,0, 2
+66,10, 0,0, 2
+66,11, 0,0, 2
+66,12, 0,0, 2
+66,13, 0,0, 2
+66,14, 0,0, 2
+66,15, 0,0, 2
+66,16, 0,0, 2
+66,17, 0,0, 2
+66,18, 0,0, 2
+66,19, 0,0, 2
+66,20, 0,0, 2
+66,21, 0,0, 2
+
+
+;Anim bird 02
+[Begin Action 77]
+
+66,9, 0,0, 2
+66,10, 0,0, 2
+66,11, 0,0, 2
+66,12, 0,0, 2
+66,13, 0,0, 2
+66,14, 0,0, 2
+66,15, 0,0, 2
+66,16, 0,0, 2
+66,17, 0,0, 2
+66,18, 0,0, 2
+66,19, 0,0, 2
+66,20, 0,0, 2
+66,21, 0,0, 2
+66,1, 0,0, 2
+66,2, 0,0, 2
+66,3, 0,0, 2
+66,4, 0,0, 2
+66,5, 0,0, 2
+66,6, 0,0, 2
+66,7, 0,0, 2
+66,8, 0,0, 2
+
+[BG 0, Lens Flare 1]
+Type = Anim
+ActionNO = 16
+Mask = 1
+start = -150,-580
+Delta = 1.145, 0.42
+LayerNo = 1
+
+[BG 0, Lens Flare 2]
+Type = Anim
+ActionNO = 17
+Mask = 1
+start = -150,-580
+Delta = 1.165, 0.41
+LayerNo = 1
+
+[BG 0, Lens Flare 3]
+Type = Anim
+ActionNO = 18
+Mask = 1
+start = -150,-580
+Delta = 1.185, 0.40
+LayerNo = 1
+
+; Lens 1
+[Begin Action 16]             
+interpolate blend
+16,0, 0,0, 210,,AS256D256,1,1,0                  
+interpolate blend
+16,0, 0,0, 240,,AS196D256,1,1,0                    
+interpolate blend
+16,0, 0,0, 150,,AS256D256,1,1,0                   
+interpolate blend
+16,0, 0,0, 100,,AS256D256,1,1,0                   
+interpolate blend
+16,0, 0,0, 70,,AS64D256,1,1,0                   
+interpolate blend
+16,0, 0,0, 90,,AS196D256,1,1,0
+interpolate blend
+16,0, 0,0, 75,,AS128D256,1,1,0                    
+interpolate blend
+16,0, 0,0, 120,,AS224D256,1,1,0
+
+; Lens 2
+[Begin Action 17]             
+interpolate blend
+16,1, 0,0, 110,,AS256D256,1,1,0                  
+interpolate blend
+16,1, 0,0, 240,,AS196D256,1,1,0                    
+interpolate blend
+16,1, 0,0, 120,,AS256D256,1,1,0                   
+interpolate blend
+16,1, 0,0, 80,,AS256D256,1,1,0                   
+interpolate blend
+16,1, 0,0, 120,,AS64D256,1,1,0                   
+interpolate blend
+16,1, 0,0, 140,,AS196D256,1,1,0
+interpolate blend
+16,1, 0,0, 175,,AS128D256,1,1,0                    
+interpolate blend
+16,1, 0,0, 320,,AS224D256,1,1,0
+
+; Lens 3
+[Begin Action 18]             
+interpolate blend
+16,2, 0,0, 175,,AS256D256,1,1,0                  
+interpolate blend
+16,2, 0,0, 150,,AS196D256,1,1,0                    
+interpolate blend
+16,2, 0,0, 120,,AS256D256,1,1,0                   
+interpolate blend
+16,2, 0,0, 80,,AS256D256,1,1,0                   
+interpolate blend
+16,2, 0,0, 70,,AS64D256,1,1,0                   
+interpolate blend
+16,2, 0,0, 120,,AS196D256,1,1,0
+interpolate blend
+16,2, 0,0, 150,,AS128D256,1,1,0                    
+interpolate blend
+16,2, 0,0, 130,,AS224D256,1,1,0

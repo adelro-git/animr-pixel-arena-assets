@@ -1,0 +1,138 @@
+
+
+;--------------------------------------------------------
+[Info]
+ ;Name of the stage.
+name = "q"
+
+;--------------------------------------------------------
+[Camera]
+
+startx = 0
+starty = 0
+boundleft = -5000
+boundright = 5000
+boundhigh = -240
+boundlow = 0
+tension = 100
+zoomin = 1.35
+zoomout = .75
+
+
+;--------------------------------------------------------
+[PlayerInfo]
+p1startx = -70         
+p1starty = 0            
+p1startz = 0            
+p1facing = 1       
+  
+p2startx = 70
+p2starty = 0
+p2startz = 0
+p2facing = -1
+
+;--- Common ---
+leftbound  = -6000 
+rightbound =  6000 
+topbound  =  0     
+botbound  =  0     
+
+;--------------------------------------------------------
+[Scaling]
+topz     = 0       
+botz     = 50      
+topscale = 1      
+botscale = 1.2  
+
+;--------------------------------------------------------
+[Bound]
+screenleft = 15   
+screenright = 15   
+;--------------------------------------------------------
+[StageInfo]
+zoffset = -20;225
+zoffsetlink = 5
+autoturn = 1
+resetBG = 0
+
+[Shadow]
+color = 128,128,128
+yscale = .3
+reflect = 0
+
+;--------------------------------------------------------
+[Music]
+bgmusic = sound/CyberCityVP.mp3
+bgvolume = 255
+
+;========================================================
+
+[BGdef]
+spr = stages/CyberCityVP.sff
+debugbg = 0
+
+[BG sky]
+type = normal
+spriteno = 4,0
+start = 0, 240
+delta = .05,1
+tile = 1,1
+id = 5
+
+[BG building back]
+type = normal
+spriteno = 3,0
+start = 0, 240
+delta = .15,1
+tile = 1,0
+mask = 1
+id = 5
+
+[BG building mid]
+type = normal
+spriteno = 2,0
+start = 0, 240
+delta = .25,1
+tile = 1,0
+mask = 1
+id = 5
+
+[BG building front]
+type = normal
+spriteno = 1,0
+start = 0, 240
+delta = .35,1
+tile = 1,0
+mask = 1
+id = 5
+
+[BG floor]
+type = parallax
+spriteno = 0,0
+start = 0, 240
+delta = .6400,1
+width = 188,376
+tile = 1,0
+mask = 1
+id = 5
+
+[BGCtrlDef 1]
+CtrlId = 5
+
+[BGCtrl 1]
+type = posset
+time = 0
+x=0
+y = 130
+
+[BGCtrl 1]
+type = velset
+time = 0
+x = 0
+y = -.7
+
+[BGCtrl 1]
+type = velset
+time = 180
+x = 0
+y = 0

@@ -1,0 +1,489 @@
+
+[Info]
+name 		= "T"
+versiondate 	= 
+mugenversion 	= 1.0
+author 		= "sage of mugen"
+
+[Camera]
+startx 		= 0
+starty 		= 0
+boundleft 	= -460
+boundright 	= 460
+boundhigh 	= -32
+boundlow 	= 0
+tension 	= 200
+verticalfollow 	= -100
+floortension 	= 400
+overdrawhigh 	= 120
+overdrawlow 	= 120
+cuthigh 	= 0
+cutlow 		= 0
+zoomout = 0.6
+zoomin = 1.25
+
+[PlayerInfo]
+p1startx 	= -280
+p1starty 	= 0
+p1facing 	= 1
+p2startx 	= 280
+p2starty 	= 0
+p2facing 	= -1
+p3startx 	= -400
+p3starty 	= 0
+p3facing 	= 1
+p4startx 	= 400
+p4starty 	= 0
+p4facing 	= -1
+leftbound 	= -4000
+rightbound 	= 4000
+
+[Bound]
+screenleft 	= 60
+screenright 	= 60;60
+
+[StageInfo]
+zoffset 	= 703.0
+autoturn 	= 1
+resetBG 	= 0
+
+localcoord 	= 1280, 792
+xscale 		= 1
+yscale 		= 1
+
+[Scaling]
+topz     	= 0
+botz     	= 50
+topscale 	= 1
+botscale 	= 1.2
+
+[Shadow]
+color 		= 239,41,255
+yscale 		= .6
+intensity 	= 50
+
+
+[Music]
+bgmusic 	= sound/hueco mundo NEW.mp3
+bgvolume 	= 255
+
+[BGdef]
+spr 		= stages/hueco mundo NEW.sff
+debugbg 	= 0
+
+
+[BG image]
+type  		= normal
+spriteno 	= 0, 0
+start 		= 0,-700
+delta 		= 1,1
+mask=1
+
+[BG image]
+type  		= normal
+spriteno 	= 0, 1
+start 		= 0,-700
+delta 		= 1,1
+trans		= add
+mask=1
+
+[BG image]
+type  		= normal
+spriteno 	= 0, 2
+start 		= 0,-700
+delta 		= 1,1
+trans		= add
+mask=1
+
+;[BG Polvo]
+;type = Normal
+;spriteno = 1,2
+;start = 0,770
+;delta = 2,2
+;Layerno = 1
+;mask = 1
+;tile = 1,0
+;velocity = 3,0
+;trans = add
+;alpha = 70,256
+
+
+
+[BG POLVO 3]
+type = Normal
+spriteno = 2,1
+start = 1000,0
+delta = 1.2,1.2
+Layerno = 0
+mask = 1
+tile = 1,0
+trans = addalpha
+alpha = 30,256
+velocity = -.5
+
+[BG POLVO 2]
+type = Normal
+spriteno = 2,1
+start = 0,300
+delta = 1.5,1.5
+Layerno = 0
+mask = 1
+tile = 1,0
+trans = addalpha
+alpha = 100,256
+velocity = -1
+
+[BG POLVO]
+type = Normal
+spriteno = 2,1
+start = 500,400
+delta = 1.8,1.8
+Layerno = 0
+mask = 1
+tile = 1,0
+trans = addalpha
+alpha = 80,256
+velocity = -1.5
+
+[BG POLVO]
+type = Normal
+spriteno = 2,1
+start = 0,450
+delta = 2,2
+Layerno = 1
+mask = 1
+tile = 1,0
+trans = addalpha
+alpha = 90,256
+velocity = -1.75
+
+[BG POLVO]
+type = Normal
+spriteno = 2,1
+start = 500,550
+delta = 2.2,2.2
+Layerno = 1
+mask = 1
+tile = 1,0
+trans = addalpha
+alpha = 110,256
+velocity = -3
+
+[BG POLVO fog]
+type = Normal
+spriteno = 2,2
+start = 500,550
+delta = 1,1
+Layerno = 1
+mask = 1
+tile = 1,0
+trans = addalpha
+alpha = 80,256
+velocity = -10
+
+
+[BG 0, cloud1]
+Type = Normal
+SpriteNO = 100, 0
+Mask = 1
+Start = -800, 0
+Delta = 1,1
+trans = addalpha
+alpha = 180,256
+Velocity = -1,0
+Tile = 1, 0
+
+[BG 0, cloud2]
+Type = Normal
+SpriteNO = 100, 1
+Mask = 1
+Start = -400, 70
+Delta = 1,1
+trans = addalpha
+alpha = 180,256
+Velocity = -.5,0
+Tile = 1, 0
+
+[BG 0, cloud3]
+Type = Normal
+SpriteNO = 100, 2
+Mask = 1
+Start = -100, -20
+Delta = 1,1
+trans = addalpha
+alpha = 180,256
+Velocity = -.65,0
+Tile = 1, 0
+
+;[BG 0, Sn0w 2]
+;Type = Normal
+;SpriteNO = 100, 1
+;Mask = 1
+;Start = 0, 450
+;trans = addalpha
+;alpha = 190,256
+;Delta = 1.2, 0.9
+;Velocity = -0.5, 4
+;Sin.Y = -15, 500, 0
+;Sin.X = -25, 800, 0
+;Tile = 1, 1
+;LayerNo = 1
+
+
+
+[BG Twister]
+type  = anim
+actionno = 8
+layerno = 0
+start = -400, 600
+delta = 1.1, 1.5
+velocity = -0.5,0
+mask  = 1
+zoomdelta = 1
+tile = 1,0
+tilespacing = 3700,0
+scalestart = 0.5, 1
+id = 1
+
+[BG 1 Twister]
+type  = anim
+actionno = 11
+layerno = 0
+start = 100, 300
+delta = 1,1
+velocity = -0.15,0
+mask  = 1
+zoomdelta = 1
+tile = 1,0
+tilespacing = 3800,0
+scalestart = 0.25, 0.5
+id = 1
+
+[BGCtrl 1 TwisterAnimOff]
+type = Anim
+time = 0
+ctrlID = 1
+value = 11
+[BGCtrl 1 TwisterAnimOn]
+type = Anim
+time = 100
+ctrlID = 1
+value = 10
+
+[BGCtrl TwisterAnimOff]
+type = Anim
+time = 0
+ctrlID = 1
+value = 8
+[BGCtrl TwisterAnimOn]
+type = Anim
+time = 50
+ctrlID = 1
+value = 7
+
+
+
+
+[BG 1 Hueco king right to left]
+type  = anim
+actionno = 20
+layerno = 0
+start = 100, 400
+delta = 1,1
+velocity = -3,0
+mask  = 1
+zoomdelta = 1
+tile = 1,0
+tilespacing = 3900,0
+Sin.Y = -40, 150, 40
+scalestart = 0.8, 0.8
+id = 2
+
+[BGCtrl 1 Hueco king right to leftOff]
+type = Anim
+time = 200
+ctrlID = 2
+value = 20
+[BGCtrl 1 Hueco king right to leftOn]
+type = Anim
+time = 300
+ctrlID = 2
+value = 20
+
+[BG 1 Hueco king left to right]
+type  = anim
+actionno = 30
+layerno = 0
+start = 500, 400
+delta = 1,1
+velocity = 3,0
+mask  = 1
+zoomdelta = 1
+tile = 1,0
+Sin.Y = -40, 150, 40
+tilespacing = 4000,0
+scalestart = 0.8, 0.8
+id =3
+
+[BGCtrl 1 Hueco king leftt torightOff]
+type = Anim
+time = 0
+ctrlID = 3
+value = 30
+[BGCtrl 1 Hueco king left to rightOn]
+type = Anim
+time = 100
+ctrlID = 3
+value = 30
+
+[Begin Action 8]
+7,0, 0,0, 3,,AS76D256
+7,1, 0,0, 3,,AS76D256
+7,2, 0,0, 3,,AS70D256
+7,3, 0,0, 3,,AS70D256
+7,4, 0,0, 3,,AS60D256
+7,5, 0,0, 3,,AS60D256
+7,6, 0,0, 3,,AS50D256
+7,7, 0,0, 3,,AS50D256
+7,0, 0,0, 3,,AS40D256
+7,1, 0,0, 3,,AS40D256
+7,2, 0,0, 3,,AS30D256
+7,3, 0,0, 3,,AS30D256
+7,4, 0,0, 3,,AS20D256
+7,5, 0,0, 3,,AS20D256
+7,6, 0,0, 3,,AS10D256
+7,7, 0,0, 3,,AS10D256
+-1,0, 0,0, -1
+
+
+[Begin Action 11]
+10,0, 0,0, 3,,AS76D256
+10,1, 0,0, 3,,AS76D256
+10,2, 0,0, 3,,AS70D256
+10,3, 0,0, 3,,AS70D256
+10,4, 0,0, 3,,AS60D256
+10,5, 0,0, 3,,AS60D256
+10,6, 0,0, 3,,AS50D256
+10,7, 0,0, 3,,AS50D256
+10,0, 0,0, 3,,AS40D256
+10,1, 0,0, 3,,AS40D256
+10,2, 0,0, 3,,AS30D256
+10,3, 0,0, 3,,AS30D256
+10,4, 0,0, 3,,AS20D256
+10,5, 0,0, 3,,AS20D256
+10,6, 0,0, 3,,AS10D256
+10,7, 0,0, 3,,AS10D256
+-1,0, 0,0, -1
+
+[Begin Action 7]
+7,0, 0,0, 2,,AS1D256
+7,0, 0,0, 3,,AS4D256
+7,1, 0,0, 3,,AS7D256
+7,2, 0,0, 3,,AS10D256
+7,3, 0,0, 3,,AS13D256
+7,4, 0,0, 3,,AS16D256
+7,5, 0,0, 3,,AS19D256
+7,6, 0,0, 3,,AS22D256
+7,7, 0,0, 3,,AS25D256
+7,0, 0,0, 3,,AS28D256
+7,1, 0,0, 3,,AS31D256
+7,2, 0,0, 3,,AS34D256
+7,3, 0,0, 3,,AS37D256
+7,4, 0,0, 3,,AS40D256
+7,5, 0,0, 3,,AS43D256
+7,6, 0,0, 3,,AS46D256
+7,7, 0,0, 3,,AS49D256
+7,0, 0,0, 3,,AS52D256
+7,1, 0,0, 3,,AS55D256
+7,2, 0,0, 3,,AS58D256
+7,3, 0,0, 3,,AS61D256
+7,4, 0,0, 3,,AS64D256
+7,5, 0,0, 3,,AS67D256
+7,6, 0,0, 3,,AS70D256
+7,7, 0,0, 3,,AS73D256
+LoopStart
+7,0, 0,0, 3,,AS76D256
+7,1, 0,0, 3,,AS76D256
+7,2, 0,0, 3,,AS76D256
+7,3, 0,0, 3,,AS76D256
+7,4, 0,0, 3,,AS76D256
+7,5, 0,0, 3,,AS76D256
+7,6, 0,0, 3,,AS76D256
+7,7, 0,0, 3,,AS76D256
+
+
+[Begin Action 10]
+10,0, 0,0, 2,,AS1D256
+10,0, 0,0, 3,,AS4D256
+10,1, 0,0, 3,,AS7D256
+10,2, 0,0, 3,,AS10D256
+10,3, 0,0, 3,,AS13D256
+10,4, 0,0, 3,,AS16D256
+10,5, 0,0, 3,,AS19D256
+10,6, 0,0, 3,,AS22D256
+10,7, 0,0, 3,,AS25D256
+10,0, 0,0, 3,,AS28D256
+10,1, 0,0, 3,,AS31D256
+10,2, 0,0, 3,,AS34D256
+10,3, 0,0, 3,,AS37D256
+10,4, 0,0, 3,,AS40D256
+10,5, 0,0, 3,,AS43D256
+10,6, 0,0, 3,,AS46D256
+10,7, 0,0, 3,,AS49D256
+10,0, 0,0, 3,,AS52D256
+10,1, 0,0, 3,,AS55D256
+10,2, 0,0, 3,,AS58D256
+10,3, 0,0, 3,,AS61D256
+10,4, 0,0, 3,,AS64D256
+10,5, 0,0, 3,,AS67D256
+10,6, 0,0, 3,,AS70D256
+10,7, 0,0, 3,,AS73D256
+LoopStart
+10,0, 0,0, 3,,AS76D256
+10,1, 0,0, 3,,AS76D256
+10,2, 0,0, 3,,AS76D256
+10,3, 0,0, 3,,AS76D256
+10,4, 0,0, 3,,AS76D256
+10,5, 0,0, 3,,AS76D256
+10,6, 0,0, 3,,AS76D256
+10,7, 0,0, 3,,AS76D256
+
+
+; HUECO KING RIGHT TO LEFT
+[Begin Action 20]
+LoopStart
+-1,0, 0,0, 200
+20,0, 0,0, 5, , AS76D200
+20,0, 0,0, 5, , AS100D200
+20,0, 0,0, 5, , AS120D200
+20,0, 0,0, 5, , AS150D200
+20,0, 0,0, 5, , AS190D190
+20,0, 0,0, 5, , AS240D180
+20,0, 0,0, 100, , AS256D170
+20,0, 0,0, 5, , AS240D170
+20,0, 0,0, 5, , AS190D170
+20,0, 0,0, 5, , AS150D170
+20,0, 0,0, 5, , AS120D170
+20,0, 0,0, 5, , AS100D170
+20,0, 0,0, 5, , AS76D170
+-1,0, 0,0, 10
+
+; HUECO KING Lleft TO right
+[Begin Action 30]
+LoopStart
+-1,0, 0,0, 200
+20,0, 0,0, 5, H, AS76D200
+20,0, 0,0, 5, H, AS100D200
+20,0, 0,0, 5, H, AS120D200
+20,0, 0,0, 5, H, AS150D200
+20,0, 0,0, 5, H, AS190D190
+20,0, 0,0, 5, H, AS240D180
+20,0, 0,0, 100, H, AS256D170
+20,0, 0,0, 5, H, AS240D170
+20,0, 0,0, 5, H, AS190D170
+20,0, 0,0, 5, H, AS150D170
+20,0, 0,0, 5, H, AS120D170
+20,0, 0,0, 5, H, AS100D170
+20,0, 0,0, 5, H, AS76D170
+-1,0, 0,0, 10
+

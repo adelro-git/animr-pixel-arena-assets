@@ -1,0 +1,434 @@
+;                        EDITED STAGE
+;=============================================================
+;  STAGE INFORMATION :
+;
+;  Resolution : 1280 * 720
+;  Mugen Version : Mugen 1.1 only
+;  Versiondate : Septiembre,2014
+;  Reedicion : Daniel's 
+;
+;=============================================================
+
+
+
+[Info]
+name 		= "Hidden Entrance"
+displayname 	= "%"
+mugenversion 	= 1.1
+author 		= "AceMillion"
+;ReEdit   = "********-----Remake by Daniel's-------******" 
+
+[Camera]
+startx = 0
+starty = 0
+boundleft = -110
+boundright = 140
+boundhigh = -200
+boundlow = 0
+tension = 100
+zoomin = 1.4
+zoomout = .7
+
+[PlayerInfo]
+;--- Player 1 ---
+ ;Player 1 starting coordinates.
+p1startx = -150         ;Starting x coordinates
+p1starty = 0            ;Starting y coordinates
+p1facing = 1            ;Direction player faces: 1=right, -=left
+
+;--- Player 2 ---
+p2startx = 150
+p2starty = 0
+p2facing = -1
+
+;--- Player 3 ---
+p3startx = -220
+p3starty = 0
+p3facing = 1
+
+;--- Player 4 ---
+p4startx = 220
+p4starty = 0
+p4facing = -1
+
+;--- Common ---
+leftbound  = -4000 ;Left bound (x-movement)
+rightbound =  4000 ;Right bound
+
+[Bound]
+screenleft = 40   ;Dist from left of screen that player can move to
+screenright =40  ;Right edge
+
+[StageInfo]
+zoffset = 330
+autoturn = 1
+resetBG = 0
+localcoord =  640,360
+
+[Shadow]
+color = 256,256,256    
+intensity = 150
+                 
+ 
+
+[Music]
+bgmusic = sound/Hidden Entrance.mp3
+bgmvolume = 255
+
+[BGdef]
+spr = Hidden Entrance.sff
+debugbg 	= 0
+
+[BG image_fondo]
+type = normal
+spriteno 	= 0, 0
+start= 0,355
+delta = .05,.45
+mask = 1 
+layerno = 0
+tile=1,1
+
+[BG nubes]
+type = normal
+spriteno = 0,1
+start = 0,240
+delta = .13,.5
+mask = 1
+tile = 1,0
+velocity = .3, 0
+scalestart=.6,.6
+
+
+
+
+
+[BG image_esculturas]
+type = normal
+spriteno 	= 0, 4
+start = 0,305
+delta = .35,.8
+mask = 1
+layerno = 0
+scalestart=1,1
+
+[BG luces]
+type =anim
+actionno=5
+start = 0,305
+delta =.35,.8
+
+[BG luces]
+type =anim
+actionno=6
+start = 0,305
+delta =.35,.8
+
+[BG luces]
+type =anim
+actionno=7
+start = 0,305
+delta =.35,.8
+
+[BG luces]
+type =anim
+actionno=8
+start = 0,305
+delta =.35,.8
+
+[BG luces]
+type =anim
+actionno=9
+start = 0,305
+delta =.35,.8
+
+[BG luces]
+type =anim
+actionno=10
+start = 0,305
+delta =.35,.8
+
+[BG luces]
+type =anim
+actionno=11
+start = 0,305
+delta =.35,.8
+
+[BG luces]
+type =anim
+actionno=12
+start = 0,305
+delta =.35,.8
+
+[BG luces]
+type =anim
+actionno=13
+start = 0,305
+delta =.35,.8
+
+
+;red
+
+[BG luces]
+type =anim
+actionno=14
+start = 0,305
+delta =.35,.8
+
+[BG luces]
+type =anim
+actionno=15
+start = 0,305
+delta =.35,.8
+
+[BG luces]
+type =anim
+actionno=16
+start = 0,305
+delta =.35,.8
+
+[BG luces]
+type =anim
+actionno=17
+start = 0,305
+delta =.35,.8
+
+[BG luces]
+type =anim
+actionno=18
+start = 0,305
+delta =.35,.8
+
+[BG luces]
+type =anim
+actionno=19
+start = 0,305
+delta =.35,.8
+
+[BG luces]
+type =anim
+actionno=20
+start = 0,305
+delta =.35,.8
+
+[BG luces]
+type =anim
+actionno=21
+start = 0,305
+delta =.35,.8
+
+[BG luces]
+type =anim
+actionno=22
+start = 0,305
+delta =.35,.8
+
+
+
+[BG image_puente]
+type = normal
+spriteno 	= 0, 5
+start = 0,300
+delta = 1,1
+mask = 1
+layerno = 0
+
+
+
+
+; yellow
+[Begin Action 5]
+7,1,0,0,2,,AS50D256
+7,1,0,0,2,,AS70D256
+7,1,0,0,2,,AS110D256
+7,1,0,0,4,,AS150D256
+7,1,0,0,2,,AS110D256
+7,1,0,0,2,,AS70D256
+-1,0,0,0,126
+
+
+[Begin Action 6]
+-1,0,0,0,14
+7,2,0,0,2,,AS50D256
+7,2,0,0,2,,AS70D256
+7,2,0,0,2,,AS110D256
+7,2,0,0,4,,AS150D256
+7,2,0,0,2,,AS110D256
+7,2,0,0,2,,AS70D256
+-1,0,0,0,112
+
+
+[Begin Action 7]
+-1,0,0,0,28
+7,3,0,0,2,,AS50D256
+7,3,0,0,2,,AS70D256
+7,3,0,0,2,,AS110D256
+7,3,0,0,4,,AS150D256
+7,3,0,0,2,,AS110D256
+7,3,0,0,2,,AS70D256
+-1,0,0,0,98
+
+
+[Begin Action 8]
+-1,0,0,0,42
+7,4,0,0,2,,AS50D256
+7,4,0,0,2,,AS70D256
+7,4,0,0,2,,AS110D256
+7,4,0,0,4,,AS150D256
+7,4,0,0,2,,AS110D256
+7,4,0,0,2,,AS70D256
+-1,0,0,0,84
+
+
+[Begin Action 9]
+-1,0,0,0,56
+7,5,0,0,2,,AS50D256
+7,5,0,0,2,,AS70D256
+7,5,0,0,2,,AS110D256
+7,5,0,0,4,,AS150D256
+7,5,0,0,2,,AS110D256
+7,5,0,0,2,,AS70D256
+-1,0,0,0,70
+
+
+[Begin Action 10]
+-1,0,0,0,70
+7,6,0,0,2,,AS50D256
+7,6,0,0,2,,AS70D256
+7,6,0,0,2,,AS110D256
+7,6,0,0,4,,AS150D256
+7,6,0,0,2,,AS110D256
+7,6,0,0,2,,AS70D256
+-1,0,0,0,56
+
+
+[Begin Action 11]
+-1,0,0,0,84
+7,7,0,0,2,,AS50D256
+7,7,0,0,2,,AS70D256
+7,7,0,0,2,,AS110D256
+7,7,0,0,4,,AS150D256
+7,7,0,0,2,,AS110D256
+7,7,0,0,2,,AS70D256
+-1,0,0,0,42
+
+
+[Begin Action 12]
+-1,0,0,0,98
+7,8,0,0,2,,AS50D256
+7,8,0,0,2,,AS70D256
+7,8,0,0,2,,AS110D256
+7,8,0,0,4,,AS150D256
+7,8,0,0,2,,AS110D256
+7,8,0,0,2,,AS70D256
+-1,0,0,0,28
+
+
+[Begin Action 13]
+-1,0,0,0,112
+7,9,0,0,2,,AS50D256
+7,9,0,0,2,,AS70D256
+7,9,0,0,2,,AS110D256
+7,9,0,0,4,,AS150D256
+7,9,0,0,2,,AS110D256
+7,9,0,0,2,,AS70D256
+-1,0,0,0,14
+
+;red
+
+[Begin Action 14]
+8,1,0,0,2,,AS50D256
+8,1,0,0,2,,AS70D256
+8,1,0,0,2,,AS110D256
+8,1,0,0,4,,AS150D256
+8,1,0,0,2,,AS110D256
+8,1,0,0,2,,AS70D256
+-1,0,0,0,126
+
+
+[Begin Action 15]
+-1,0,0,0,14
+8,2,0,0,2,,AS50D256
+8,2,0,0,2,,AS70D256
+8,2,0,0,2,,AS110D256
+8,2,0,0,4,,AS150D256
+8,2,0,0,2,,AS110D256
+8,2,0,0,2,,AS70D256
+-1,0,0,0,112
+
+
+[Begin Action 16]
+-1,0,0,0,28
+8,3,0,0,2,,AS50D256
+8,3,0,0,2,,AS70D256
+8,3,0,0,2,,AS110D256
+8,3,0,0,4,,AS150D256
+8,3,0,0,2,,AS110D256
+8,3,0,0,2,,AS70D256
+-1,0,0,0,98
+
+
+[Begin Action 17]
+-1,0,0,0,42
+8,4,0,0,2,,AS50D256
+8,4,0,0,2,,AS70D256
+8,4,0,0,2,,AS110D256
+8,4,0,0,4,,AS150D256
+8,4,0,0,2,,AS110D256
+8,4,0,0,2,,AS70D256
+-1,0,0,0,84
+
+
+[Begin Action 18]
+-1,0,0,0,56
+8,5,0,0,2,,AS50D256
+8,5,0,0,2,,AS70D256
+8,5,0,0,2,,AS110D256
+8,5,0,0,4,,AS150D256
+8,5,0,0,2,,AS110D256
+8,5,0,0,2,,AS70D256
+-1,0,0,0,70
+
+
+[Begin Action 19]
+-1,0,0,0,70
+8,6,0,0,2,,AS50D256
+8,6,0,0,2,,AS70D256
+8,6,0,0,2,,AS110D256
+8,6,0,0,4,,AS150D256
+8,6,0,0,2,,AS110D256
+8,6,0,0,2,,AS70D256
+-1,0,0,0,56
+
+
+[Begin Action 20]
+-1,0,0,0,84
+8,7,0,0,2,,AS50D256
+8,7,0,0,2,,AS70D256
+8,7,0,0,2,,AS110D256
+8,7,0,0,4,,AS150D256
+8,7,0,0,2,,AS110D256
+8,7,0,0,2,,AS70D256
+-1,0,0,0,42
+
+
+[Begin Action 21]
+-1,0,0,0,98
+8,8,0,0,2,,AS50D256
+8,8,0,0,2,,AS70D256
+8,8,0,0,2,,AS110D256
+8,8,0,0,4,,AS150D256
+8,8,0,0,2,,AS110D256
+8,8,0,0,2,,AS70D256
+-1,0,0,0,28
+
+
+[Begin Action 22]
+-1,0,0,0,112
+8,9,0,0,2,,AS50D256
+8,9,0,0,2,,AS70D256
+8,9,0,0,2,,AS110D256
+8,9,0,0,4,,AS150D256
+8,9,0,0,2,,AS110D256
+8,9,0,0,2,,AS70D256
+-1,0,0,0,14
+

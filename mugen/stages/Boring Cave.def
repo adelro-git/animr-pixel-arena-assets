@@ -1,0 +1,98 @@
+
+;=============================================================
+[Info]
+name 		= "Ace"
+displayname 	= "H"
+mugenversion 	= 1.1
+author 		= "AceMillion"
+
+[Camera]
+startx = 0
+starty = 0
+boundleft = -105
+boundright = 105
+boundhigh = -450
+boundlow = -25
+tension = 100
+zoomin = 1.4
+zoomout = .8
+
+[PlayerInfo]
+;--- Player 1 ---
+ ;Player 1 starting coordinates.
+p1startx = -200         ;Starting x coordinates
+p1starty = 0            ;Starting y coordinates
+p1facing = 1            ;Direction player faces: 1=right, -=left
+
+;--- Player 2 ---
+p2startx = 200
+p2starty = 0
+p2facing = -1
+
+;--- Player 3 ---
+p3startx = -300
+p3starty = 0
+p3facing = 1
+
+;--- Player 4 ---
+p4startx = 300
+p4starty = 0
+p4facing = -1
+
+;--- Common ---
+leftbound  = -4000 ;Left bound (x-movement)
+rightbound =  4000 ;Right bound
+
+[Bound]
+screenleft = 15   ;Dist from left of screen that player can move to
+screenright = 15   ;Right edge
+
+[StageInfo]
+zoffset = 850
+autoturn = 1
+resetBG = 0
+localcoord = 1025,1025             
+          
+
+[Music]
+bgmusic 	= sound/Boring Cave.mp3
+bgvolume 	= 255
+
+[BGdef]
+spr 		= stages/Boring Cave.sff
+debugbg 	= 0
+
+[BG image]
+type  		= normal
+spriteno 	= 0, 12
+start 		= 0,845
+delta 		= 1,1
+mask = 1
+layerno = 0
+
+[BG image]
+type  		= normal
+spriteno 	= 0, 13
+start 		= 0,845
+delta 		= 1,1
+mask = 1
+layerno = 0
+
+[BG image]
+type  		= normal
+spriteno 	= 0, 15
+start 		= 0,845
+delta 		= 1,1
+mask = 1
+layerno = 0
+
+[BG image]
+type  		= normal
+spriteno 	= 0, 14
+start 		= 0,845
+delta 		= 1,1
+mask = 1
+layerno = 0
+
+
+

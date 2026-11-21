@@ -1,0 +1,145 @@
+
+;=============================================================
+[Info]
+name 		= "Death"
+displayname 	= "^"
+mugenversion 	= 1.1
+author 		= "AceMillion"
+
+[Camera]
+startx = 0
+starty = 0
+boundleft = -70
+boundright = 70
+boundhigh = -750
+boundlow = -30
+tension = 100
+zoomout = .75
+zoomin = 1.4
+
+[PlayerInfo]
+;--- Player 1 ---
+ ;Player 1 starting coordinates.
+p1startx = -200         ;Starting x coordinates
+p1starty = 0            ;Starting y coordinates
+p1facing = 1            ;Direction player faces: 1=right, -=left
+
+;--- Player 2 ---
+p2startx = 200
+p2starty = 0
+p2facing = -1
+
+;--- Player 3 ---
+p3startx = -300
+p3starty = 0
+p3facing = 1
+
+;--- Player 4 ---
+p4startx = 300
+p4starty = 0
+p4facing = -1
+
+;--- Common ---
+leftbound  = -4000 ;Left bound (x-movement)
+rightbound =  4000 ;Right bound
+
+[Bound]
+screenleft = 25  ;Dist from left of screen that player can move to
+screenright = 25 ;Right edge
+
+[StageInfo]
+zoffset = 940
+autoturn = 1
+resetBG = 0
+localcoord = 1725,1725         
+ 
+
+[Music]
+bgmusic 	= sound/Death.mp3
+bgvolume 	= 255
+
+[BGdef]
+spr 		= stages/Death.sff
+debugbg 	= 0
+
+[BG image]
+type  		= normal
+spriteno 	= 0,12
+start 		= 0,1035
+delta 		= 1,1
+mask = 1
+layerno = 0
+
+
+[BG image]
+type  		= normal
+spriteno 	= 0,13
+start 		= 0,1035
+delta 		= 1,1
+mask = 1
+layerno = 0
+
+[BG image]
+type  		= normal
+spriteno 	= 0,14
+start 		= 0,1035
+delta 		= 1,1
+mask = 1
+layerno = 0
+
+
+
+[BG image]
+type  		= normal
+spriteno 	= 0,15
+start 		= 0,1035
+delta 		= 1,1
+mask = 1
+layerno = 0
+
+
+
+[BG image]
+type  		= anim
+actionno 	= 1
+start 		= 0,1035
+delta 		= 1,1
+mask = 1
+layerno = 0
+
+[BG image]
+type  		= anim
+actionno 	= 2
+start 		= 0,1035
+delta 		= 1,1
+mask = 1
+layerno = 0
+
+[BG image]
+type  		= anim
+actionno 	= 3
+start 		= 0,1035
+delta 		= 1,1
+mask = 1
+layerno = 0
+
+
+[Begin Action 1]
+1,0, 0,0, 8
+1,1, 0,0, 8
+1,2, 0,0, 8
+1,3, 0,0, 8
+1,2, 0,0, 8
+
+[Begin Action 2]
+2,0, 0,0, 8
+2,1, 0,0, 8
+2,2, 0,0, 8
+2,1, 0,0, 8
+
+[Begin Action 3]
+3,0, 0,0, 8
+3,1, 0,0, 8
+3,2, 0,0, 8
+3,1, 0,0, 8
+

@@ -1,0 +1,165 @@
+
+[Info]
+name = "V"
+mugenversion = 1.0
+author = "Lith Flower"
+[BGdef]
+spr = LoneBlue.sff
+debugbg = 0
+
+[Music]
+bgmusic = sound/LoneBlue.mp3
+bgvolume = 255
+
+
+[Camera]
+startx = 0
+starty = 0
+boundleft = -46
+boundright = 46
+boundhigh = 0
+boundlow = 0
+tension = 50
+zoomout = .8
+zoomin = 1.5
+
+[PlayerInfo]
+p1startx = -60          
+p1starty = 0            
+p1startz = 0            
+p1facing = 1        
+
+p2startx = 60
+p2starty = 0
+p2startz = 0
+p2facing = -1
+
+leftbound  = -1000 
+rightbound =  1000 
+topbound  =  0     
+botbound  =  0     
+
+[Scaling] 
+topz     = 0       
+botz     = 50      
+topscale = 1       
+botscale = 1.2     
+
+[Bound]
+screenleft = 15    
+screenright = 15  
+
+[StageInfo]
+zoffset = 208
+autoturn = 1
+resetBG = 1
+hires = 1
+[Shadow]
+intensity = 0
+color = 0,0,0
+yscale = .2
+
+[Reflection]
+intensity = 100
+
+;----------------------------------------[PCX IMAGE]
+[BG Skyline]
+type  = normal
+spriteno = 3,2
+layerno = 0              
+start = -360,-30
+delta = .2,
+mask = 1
+tile = 1
+;---------------------------------------
+
+[BG Water Animation]
+type  = anim
+actionno = 4
+start = -320,220
+tile = 1
+tilespacing = 1398
+delta = .6
+;---------------------------------------
+
+[BG Water Overlay]
+type  = normal
+spriteno = 1,4
+start = -360,215
+tile = 1, 1
+delta = .4,
+trans = sub
+;---------------------------------------
+[BG City]
+type  = normal
+spriteno = 3,0
+layerno = 0              
+start = -320,55
+delta = .6,
+mask = 1
+tile = 1
+;---------------------------------------
+[BG Floor background]
+type  = normal
+spriteno = 1,5
+layerno = 0              
+start = -512,-40
+delta = 2
+mask = 1
+;---------------------------------------
+[BG Floor]
+type  = normal
+spriteno = 1,3
+layerno = 0              
+start = -512,-103
+delta = 2
+mask = 1
+;tilespacing = 631
+;---------------------------------------
+[BG Reflection]
+type  = anim
+actionno = 6
+layerno = 0              
+delta = .6
+tile = 1
+tilespacing = 701
+start = -320, 350
+[Begin Action 6]
+1,6,0,0,255,,AS50D256
+;---------------------------------------
+[BG Floor Lights Overlay]
+type = anim
+actionno = 10
+layerno = 1
+start = -500, -200
+delta = 2
+mask = 1
+id = 215
+[Begin Action 10]
+4,0,0,0,2,,AS100D256
+4,0,0,0,2,,AS90D256
+
+;---------------------------------------
+[Begin Action 4]
+2,0,0,0,4, ,
+2,1,0,0,4, ,
+2,2,0,0,4, ,
+2,3,0,0,4, ,
+2,4,0,0,4, ,
+2,5,0,0,4, ,
+2,6,0,0,4, ,
+2,7,0,0,4, ,
+2,8,0,0,4, ,
+2,9,0,0,4, ,
+2,10,0,0,4, ,
+2,11,0,0,4, ,
+2,12,0,0,4, ,
+2,13,0,0,4, ,
+2,14,0,0,4, ,
+2,15,0,0,4, ,
+2,16,0,0,4, ,
+2,17,0,0,4, ,
+2,18,0,0,4, ,
+2,19,0,0,4, ,
+;---------------------------------------
+
