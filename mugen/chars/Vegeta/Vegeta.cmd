@@ -15,11 +15,43 @@ name = "Super Jump"
 command = ~D,U
 time = 10
 
+;-| ULTIMATE |-------------------------------------------------------
+
+[Command]
+name = "ULTIMATE"
+Command = ~D,DF,F,D,DF,F,a+b
+time = 30
+
 ;-| Supers |-------------------------------------------------------
 
-[command]
-name = "SUPER1"
-command = y
+[Command]
+name = "SUPER FWD+A"
+Command = ~D,DF,F,D,DF,F,a
+time = 30
+
+[Command]
+name = "SUPER BACK+A"
+Command = ~D,DB,B,D,DB,B,a
+time = 30
+
+[Command]
+name = "SUPER FWD+B"
+Command = ~D,DF,F,D,DF,F,b
+time = 30
+
+[Command]
+name = "SUPER BACK+B"
+Command = ~D,DB,B,D,DB,B,b
+time = 30
+
+[Command]
+name = "SUPER FWD+C"
+Command = ~D,DF,F,D,DF,F,c
+time = 30
+
+[Command]
+name = "SUPER BACK+C"
+Command = ~D,DB,B,D,DB,B,c
 time = 30
 
 ;-| Specials |-------------------------------------------------------
@@ -399,7 +431,7 @@ time = 1
 ; Comandos activadores
 [Command]
 name = "AI Prueba"
-command = y+z ; con el botón A+B activamos la AI
+command = y+z ; con el botÃ³n A+B activamos la AI
 time = 1
 
 [Command]
@@ -418,7 +450,7 @@ triggerall = stateno != 60
 triggerall = stateno != 70
 value = 60
 trigger1 = command = "FF"
-trigger1 = statetype != C
+trigger1 = statetype != A
 trigger1 = ctrl
 ;---------------------------------------------------------------------------
 ; Correr Atras
@@ -428,7 +460,7 @@ triggerall = stateno != 60
 triggerall = stateno != 70
 value = 70
 trigger1 = command = "BB"
-trigger1 = statetype != C
+trigger1 = statetype != A
 trigger1 = ctrl
 ;---------------------------------------------------------------------------
 ; Super Jump
@@ -438,120 +470,728 @@ value = 80
 trigger1 = command = "Super Jump"
 trigger1 = statetype = S
 trigger1 = ctrl
+;---------------------------------------------------------------------------
+; Air Dash Forward
+[State -1, Air Dash Forward]
+type = ChangeState
+triggerall = stateno != 110
+triggerall = stateno != 115
+value = 110
+trigger1 = command = "FF"
+trigger1 = statetype = A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; Air Dash Backwards
+[State -1, Air Dash Backwards]
+type = ChangeState
+triggerall = stateno != 110
+triggerall = stateno != 115
+value = 115
+trigger1 = command = "BB"
+trigger1 = statetype = A
+trigger1 = ctrl
 ;===========================================================================
-;SUPERS:
+;ULTIMATES:
 ;===========================================================================
-; Big Bang Attack
-[State -1, Big Bang Attack]
+;---------------------------------------------------------------------------
+; BASE
+;---------------------------------------------------------------------------
+; Super Galick Gun
+[State -1, Super Galick Gun]
 type = ChangeState
 triggerall = var(2) = 0
 Triggerall = power >= 3000
 value = 3000
-triggerall = command = "SUPER1"
+triggerall = command = "x"
 Triggerall = statetype != A
 trigger1 = ctrl
-trigger2 = movecontact
+trigger2 = numhelper(900) > 0
+; Super Galick Gun
+[State -1, Super Galick Gun]
+type = ChangeState
+triggerall = var(2) = 0
+Triggerall = power >= 3000
+value = 3000
+triggerall = command = "ULTIMATE"
+Triggerall = statetype != A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+
+; Super Galick Gun (Air)
+[State -1, Super Galick Gun (Air)]
+type = ChangeState
+triggerall = var(2) = 0
+Triggerall = power >= 3000
+value = 3004
+triggerall = command = "x"
+Triggerall = statetype = A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+; Super Galick Gun (Air)
+[State -1, Super Galick Gun (Air)]
+type = ChangeState
+triggerall = var(2) = 0
+Triggerall = power >= 3000
+value = 3004
+triggerall = command = "ULTIMATE"
+Triggerall = statetype = A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+;---------------------------------------------------------------------------
+; SSJ
+;---------------------------------------------------------------------------
+; Final Chase
+[State -1, Final Chase]
+type = ChangeState
+triggerall = var(2) = 1
+Triggerall = power >= 3000
+value = 3100
+triggerall = command = "x"
+Triggerall = statetype != A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+; Final Chase
+[State -1, Final Chase]
+type = ChangeState
+triggerall = var(2) = 1
+Triggerall = power >= 3000
+value = 3100
+triggerall = command = "ULTIMATE"
+Triggerall = statetype != A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+
+; Final Chase (Air)
+[State -1, Final Chase (Air)]
+type = ChangeState
+triggerall = var(2) = 1
+Triggerall = power >= 3000
+value = 3106
+triggerall = command = "x"
+Triggerall = statetype = A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+; Final Chase (Air)
+[State -1, Final Chase (Air)]
+type = ChangeState
+triggerall = var(2) = 1
+Triggerall = power >= 3000
+value = 3106
+triggerall = command = "ULTIMATE"
+Triggerall = statetype = A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+;---------------------------------------------------------------------------
+; SSJ2
+;---------------------------------------------------------------------------
+; Final Flash Attack
+[State -1, Final Flash Attack]
+type = ChangeState
+triggerall = var(2) = 2
+Triggerall = power >= 3000
+value = 3200
+triggerall = command = "x"
+Triggerall = statetype != A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+; Final Flash Attack
+[State -1, Final Flash Attack]
+type = ChangeState
+triggerall = var(2) = 2
+Triggerall = power >= 3000
+value = 3200
+triggerall = command = "ULTIMATE"
+Triggerall = statetype != A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+
+; Final Flash Attack (Air)
+[State -1, Final Flash Attack (Air)]
+type = ChangeState
+triggerall = var(2) = 2
+Triggerall = power >= 3000
+value = 3203
+triggerall = command = "x"
+Triggerall = statetype = A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+; Final Flash Attack (Air)
+[State -1, Final Flash Attack (Air)]
+type = ChangeState
+triggerall = var(2) = 2
+Triggerall = power >= 3000
+value = 3203
+triggerall = command = "ULTIMATE"
+Triggerall = statetype = A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+;---------------------------------------------------------------------------
+; SSJGOD
+;---------------------------------------------------------------------------
+; Prominence Flash
+[State -1, Prominence Flash]
+type = ChangeState
+triggerall = var(2) = 4
+Triggerall = power >= 3000
+value = 3300
+triggerall = command = "x"
+Triggerall = statetype != A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+; Prominence Flash
+[State -1, Prominence Flash]
+type = ChangeState
+triggerall = var(2) = 4
+Triggerall = power >= 3000
+value = 3300
+triggerall = command = "ULTIMATE"
+Triggerall = statetype != A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+
+; Prominence Flash (Air)
+[State -1, Prominence Flash (Air)]
+type = ChangeState
+triggerall = var(2) = 4
+Triggerall = power >= 3000
+value = 3302
+triggerall = command = "x"
+Triggerall = statetype = A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+; Prominence Flash (Air)
+[State -1, Prominence Flash (Air)]
+type = ChangeState
+triggerall = var(2) = 4
+Triggerall = power >= 3000
+value = 3302
+triggerall = command = "ULTIMATE"
+Triggerall = statetype = A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+;---------------------------------------------------------------------------
+; SSBLUE
+;---------------------------------------------------------------------------
+; Gamma Burst Flash
+[State -1, Gamma Burst Flash]
+type = ChangeState
+triggerall = var(2) = 5
+Triggerall = power >= 3000
+value = 3400
+triggerall = command = "x"
+Triggerall = statetype != A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+; Gamma Burst Flash
+[State -1, Gamma Burst Flash]
+type = ChangeState
+triggerall = var(2) = 5
+Triggerall = power >= 3000
+value = 3400
+triggerall = command = "ULTIMATE"
+Triggerall = statetype != A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+;===========================================================================
+; True Final Explosion
+[State -1, True Final Explosion]
+type = ChangeState
+triggerall = var(2) = 6
+Triggerall=teammode!=simul && enemynear,teammode!=simul
+Triggerall=power>=3000
+value = 3500
+triggerall = command = "x"
+Triggerall = statetype != A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+; True Final Explosion
+[State -1, True Final Explosion]
+type = ChangeState
+triggerall = var(2) = 6
+Triggerall=teammode!=simul && enemynear,teammode!=simul
+Triggerall=power>=3000
+value = 3500
+triggerall = command = "ULTIMATE"
+Triggerall = statetype != A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+;===========================================================================
+;SUPERS:
+;===========================================================================
+;---------------------------------------------------------------------------
+; BASE
+;---------------------------------------------------------------------------
+; Big Bang Attack
+[State -1, Big Bang Attack]
+type = ChangeState
+triggerall = var(2) = 0
+Triggerall = power >= 2000
+value = 1600
+TriggerALL = Command = "SUPER FWD+C" || Command = "SUPER BACK+C"
+Triggerall = statetype != A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+
+; Big Bang Attack (Air)
+[State -1, Big Bang Attack (Air)]
+type = ChangeState
+triggerall = var(2) = 0
+Triggerall = power >= 2000
+value = 1602
+TriggerALL = Command = "SUPER FWD+C" || Command = "SUPER BACK+C"
+Triggerall = statetype = A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+;---------------------------------------------------------------------------
+; SS
+;---------------------------------------------------------------------------
+; Final Flash
+[State -1, Final Flash]
+type = ChangeState
+triggerall = var(2) = 1
+Triggerall = power >= 2000
+value = 25600
+TriggerALL = Command = "SUPER FWD+C" || Command = "SUPER BACK+C"
+Triggerall = statetype != A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+
+; Final Flash (Air)
+[State -1, Final Flash (Air)]
+type = ChangeState
+triggerall = var(2) = 1
+Triggerall = power >= 2000
+value = 25603
+TriggerALL = Command = "SUPER FWD+C" || Command = "SUPER BACK+C"
+Triggerall = statetype = A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+;---------------------------------------------------------------------------
+; SS2
+;---------------------------------------------------------------------------
+; Crushing Impact
+[State -1, Crushing Impact]
+type = ChangeState
+triggerall = var(2) = 2
+Triggerall = power >= 1500
+value = 27600
+TriggerALL = Command = "SUPER FWD+B" || Command = "SUPER BACK+B"
+Triggerall = statetype != A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+;---------------------------------------------------------------------------
+; SSGOD
+;---------------------------------------------------------------------------
+; Impact God
+[State -1, Impact God]
+type = ChangeState
+triggerall = var(2) = 4
+Triggerall = power >= 2000
+value = 31600
+TriggerALL = Command = "SUPER FWD+B" || Command = "SUPER BACK+B"
+Triggerall = statetype != A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+
+; Impact God (Air)
+[State -1, Impact God (Air)]
+type = ChangeState
+triggerall = var(2) = 4
+Triggerall = power >= 2000
+value = 31606
+TriggerALL = Command = "SUPER FWD+B" || Command = "SUPER BACK+B"
+Triggerall = statetype = A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+;---------------------------------------------------------------------------
+; SSBLUE
+;---------------------------------------------------------------------------
+; Niagara Pummel
+[State -1, Niagara Pummel]
+type = ChangeState
+triggerall = var(2) = 5
+Triggerall = power >= 1500
+value = 33600
+TriggerALL = Command = "SUPER FWD+B" || Command = "SUPER BACK+B"
+Triggerall = statetype != A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+
+; Niagara Pummel (Air)
+[State -1, Niagara Pummel (Air)]
+type = ChangeState
+triggerall = var(2) = 5
+Triggerall = power >= 1500
+value = 33603
+TriggerALL = Command = "SUPER FWD+B" || Command = "SUPER BACK+B"
+Triggerall = statetype = A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+
+; Final Flash
+[State -1, Final Flash]
+type = ChangeState
+triggerall = var(2) = 5
+Triggerall = power >= 2000
+value = 33700
+TriggerALL = Command = "SUPER FWD+C" || Command = "SUPER BACK+C"
+Triggerall = statetype != A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+
+; Final Flash (Air)
+[State -1, Final Flash (Air)]
+type = ChangeState
+triggerall = var(2) = 5
+Triggerall = power >= 2000
+value = 33703
+TriggerALL = Command = "SUPER FWD+C" || Command = "SUPER BACK+C"
+Triggerall = statetype = A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+;---------------------------------------------------------------------------
+; SSBLUEEVOLUTION
+;---------------------------------------------------------------------------
+; Niagara Pummel
+[State -1, Niagara Pummel]
+type = ChangeState
+triggerall = var(2) = 6
+Triggerall = power >= 1500
+value = 35600
+TriggerALL = Command = "SUPER FWD+B" || Command = "SUPER BACK+B"
+Triggerall = statetype != A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+
+; Niagara Pummel (Air)
+[State -1, Niagara Pummel (Air)]
+type = ChangeState
+triggerall = var(2) = 6
+Triggerall = power >= 1500
+value = 35603
+TriggerALL = Command = "SUPER FWD+B" || Command = "SUPER BACK+B"
+Triggerall = statetype = A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+
+; Gamma Burst Flash
+[State -1, Gamma Burst Flash]
+type = ChangeState
+triggerall = var(2) = 6
+Triggerall = power >= 2000
+value = 35700
+TriggerALL = Command = "SUPER FWD+C" || Command = "SUPER BACK+C"
+Triggerall = statetype != A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+
+; Gamma Burst Flash (Air)
+[State -1, Gamma Burst Flash (Air)]
+type = ChangeState
+triggerall = var(2) = 6
+Triggerall = power >= 2000
+value = 35703
+TriggerALL = Command = "SUPER FWD+C" || Command = "SUPER BACK+C"
+Triggerall = statetype = A
+trigger1 = ctrl
+trigger2 = numhelper(900) > 0
+
+;===========================================================================
+; BASE
+;===========================================================================
+;SPECIALS:
+;===========================================================================
+; Crushing Flash
+[State -1, Crushing Flash]
+type = ChangeState
+Triggerall = power >= 1000
+Triggerall = var(2) = 0
+Value = 1000
+Triggerall = command = "SPECIAL 1"
+Triggerall = statetype != A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Crushing Flash (Air)
+[State -1, Crushing Flash (Air)]
+Type = ChangeState
+Triggerall = power >= 1000
+Triggerall = var(2) = 0
+Value = 1005
+Triggerall = command = "SPECIAL 1"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+;---------------------------------------------------------------------------
+; Explosive Wave
+[State -1, Explosive Wave]
+type = ChangeState
+triggerall = var(2) = 0
+Triggerall = power >= 1000
+value = 1100
+triggerall = command = "SPECIAL 2"
+Triggerall = statetype != A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Explosive Wave (Air)
+[State -1, Explosive Wave (Air)]
+type = ChangeState
+triggerall = var(2) = 0
+Triggerall = power >= 1000
+value = 1105
+triggerall = command = "SPECIAL 2"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+;---------------------------------------------------------------------------
+; Double Garlick Gun
+[State -1, Double Garlick Gun]
+type = ChangeState
+triggerall = var(2) = 0
+Triggerall = power >= 1500
+value = 1200
+triggerall = command = "SPECIAL 3"
+Triggerall = statetype != A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Double Garlick Gun (Air)
+[State -1, Double Garlick Gun (Air)]
+type = ChangeState
+triggerall = var(2) = 0
+Triggerall = power >= 1500
+value = 1202
+triggerall = command = "SPECIAL 3"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+;---------------------------------------------------------------------------
+; Intercept Kick
+[State -1, Intercept Kick]
+type = ChangeState
+triggerall = var(2) = 0
+Triggerall = power >= 1000
+value = 1300
+triggerall = command = "SPECIAL 4"
+Triggerall = statetype != A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Intercept Kick (Air)
+[State -1, Intercept Kick (Air)]
+type = ChangeState
+triggerall = var(2) = 0
+Triggerall = power >= 1000
+value = 1303
+triggerall = command = "SPECIAL 4"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+;---------------------------------------------------------------------------
+; Galick Gun
+[State -1, Galick Gun]
+type = ChangeState
+triggerall = var(2) = 0
+Triggerall = power >= 1500
+value = 1400
+triggerall = command = "SPECIAL 5"
+Triggerall = statetype != A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Galick Gun (Air)
+[State -1, Galick Gun (Air)]
+type = ChangeState
+triggerall = var(2) = 0
+Triggerall = power >= 1500
+value = 1403
+triggerall = command = "SPECIAL 5"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+;---------------------------------------------------------------------------
+; Super Energy Wave Volley
+[State -1, Super Energy Wave Volley]
+type = ChangeState
+Triggerall = power >= 1500
+triggerall = var(2) = 0
+value = 1500
+triggerall = command = "SPECIAL 6"
+Triggerall = statetype != A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Super Energy Wave Volley (Air)
+[State -1, Super Energy Wave Volley (Air)]
+type = ChangeState
+Triggerall = power >= 1500
+triggerall = var(2) = 0
+value = 1502
+triggerall = command = "SPECIAL 6"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+;===========================================================================
+; SUPER SAIYAN
+;===========================================================================
+;SPECIALS:
+;===========================================================================
+; Super Kick Intercept
+[State -1, Super Kick Intercept]
+type = ChangeState
+triggerall = var(2) = 1
+Triggerall = power >= 1000
+Value = 25000
+Triggerall = command = "SPECIAL 1"
+Triggerall = statetype != A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Super Kick Intercept (Air)
+[State -1, Super Kick Intercept (Air)]
+Type = ChangeState
+triggerall = var(2) = 1
+Triggerall = power >= 1000
+Value = 25003
+Triggerall = command = "SPECIAL 1"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
 ;---------------------------------------------------------------------------
 ; Super Explosive Wave
 [State -1, Super Explosive Wave]
 type = ChangeState
 triggerall = var(2) = 1
-Triggerall = power >= 3000
-value = 30100
-triggerall = command = "SUPER1"
-Triggerall = statetype != A
-trigger1 = ctrl
-trigger2 = numhelper(700) > 0
-;---------------------------------------------------------------------------
-; Final Flash
-[State -1, Final Flash]
-type = ChangeState
-triggerall = var(2) = 2
-Triggerall = power >= 3000
-value = 30000
-triggerall = command = "SUPER1"
-Triggerall = statetype != A
-trigger1 = ctrl
-trigger2 = numhelper(700) > 0
-;===========================================================================
-; Gamma Burst Flash
-[State -1, Gamma Burst Flash]
-type = ChangeState
-triggerall = var(2) = 4
-Triggerall = power >= 3000
-value = 32000
-triggerall = command = "SUPER1"
-Triggerall = statetype != A
-trigger1 = ctrl
-;---------------------------------------------------------------------------
-; Final Flash
-[State -1, Final Flash]
-type = ChangeState
-triggerall = var(2) = 5
-Triggerall = power >= 3000
-value = 34000
-triggerall = command = "SUPER1"
-Triggerall = statetype != A
-trigger1 = ctrl
-trigger2 = movecontact
-;---------------------------------------------------------------------------
-; Super Gallick Gun
-[State -1, Super Gallick Gun]
-type = Null;ChangeState
-triggerall = var(2) = 2
-Triggerall = power >= 3000
-value = 3100
-triggerall = command = "SUPER1"
-Triggerall = statetype != A
-trigger1 = ctrl
-trigger2 = movecontact
-;===========================================================================
-; Final Sacrifice
-[State -1, Final Sacrifice]
-type = ChangeState
-triggerall = var(2) = 6
-Triggerall = power >= 3000
-Triggerall = life <= 900
-Triggerall = life >= 100
-value = 36000
-triggerall = command = "SUPER1"
-Triggerall = statetype != A
-trigger1 = ctrl
-;===========================================================================
-;SPECIALS:
-;===========================================================================
-; Ki Palm
-[State -1, Ki Palm]
-type = ChangeState
-Triggerall = power >= 500
-triggerall = var(2) <3
-value = 1000
-triggerall = command = "SPECIAL 1"
-Triggerall = statetype != A
-trigger1 = ctrl
-trigger2 = movecontact
-;===========================================================================
-; Super Ki Palm
-[State -1, Super Ki Palm]
-type = ChangeState
-Triggerall = power >= 500
-triggerall = var(2) >= 3
-value = 31000
-triggerall = command = "SPECIAL 1"
-Triggerall = statetype != A
-trigger1 = ctrl
-trigger2 = movecontact
-;---------------------------------------------------------------------------
-; Explosive Wave
-[State -1, Explosive Wave]
-type = ChangeState
-triggerall = var(2) < 2
-Triggerall = power >= 1000
-value = 1100
+Triggerall = power >= 1500
+value = 25100
 triggerall = command = "SPECIAL 2"
 Triggerall = statetype != A
 trigger1 = ctrl
-trigger2 = movecontact
+
+; Super Explosive Wave (In Air)
+[State -1, Super Explosive Wave (In Air)]
+type = ChangeState
+triggerall = var(2) = 1
+Triggerall = power >= 1500
+value = 25102
+triggerall = command = "SPECIAL 2"
+Triggerall = statetype = A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; Big Bang Attack
+[State -1, Big Bang Attack]
+type = ChangeState
+triggerall = var(2) = 1
+Triggerall = power >= 1500
+value = 25200
+triggerall = command = "SPECIAL 3"
+Triggerall = statetype != A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Big Bang Attack (Air)
+[State -1, Big Bang Attack (Air)]
+type = ChangeState
+triggerall = var(2) = 1
+Triggerall = power >= 1500
+value = 25202
+triggerall = command = "SPECIAL 3"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+;---------------------------------------------------------------------------
+; Super Dash Kick
+[State -1, Super Dash Kick]
+type = ChangeState
+triggerall = var(2) = 1
+Triggerall = power >= 1000
+Value = 25300
+Triggerall = command = "SPECIAL 4"
+Triggerall = statetype != A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Super Dash Kick (Air)
+[State -1, Super Dash Kick (Air)]
+Type = ChangeState
+triggerall = var(2) = 1
+Triggerall = power >= 1000
+Value = 25303
+Triggerall = command = "SPECIAL 4"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+;---------------------------------------------------------------------------
+; Galick Gun
+[State -1, Galick Gun]
+type = ChangeState
+triggerall = var(2) = 1
+Triggerall = power >= 1500
+value = 25400
+triggerall = command = "SPECIAL 5"
+Triggerall = statetype != A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Galick Gun (Air)
+[State -1, Galick Gun (Air)]
+type = ChangeState
+triggerall = var(2) = 1
+Triggerall = power >= 1500
+value = 25403
+triggerall = command = "SPECIAL 5"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+;---------------------------------------------------------------------------
+; Super Energy Wave Volley
+[State -1, Super Energy Wave Volley]
+type = ChangeState
+Triggerall = power >= 1500
+triggerall = var(2) = 1
+value = 25500
+triggerall = command = "SPECIAL 6"
+Triggerall = statetype != A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Super Energy Wave Volley (Air)
+[State -1, Super Energy Wave Volley (Air)]
+type = ChangeState
+Triggerall = power >= 1500
+triggerall = var(2) = 1
+value = 25502
+triggerall = command = "SPECIAL 6"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+;===========================================================================
+; SUPER SAIYAN 2
+;===========================================================================
+;SPECIALS:
+;===========================================================================
+; Breaker Flash
+[State -1, Breaker Flash]
+type = ChangeState
+triggerall = var(2) = 2
+Triggerall = power >= 1000
+Value = 27000
+Triggerall = command = "SPECIAL 1"
+Triggerall = statetype != A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Breaker Flash (Air)
+[State -1, Breaker Flash (Air)]
+Type = ChangeState
+triggerall = var(2) = 2
+Triggerall = power >= 1000
+Value = 27003
+Triggerall = command = "SPECIAL 1"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
 ;---------------------------------------------------------------------------
 ; Super Explosive Wave
 [State -1, Super Explosive Wave]
@@ -562,296 +1202,579 @@ value = 27100
 triggerall = command = "SPECIAL 2"
 Triggerall = statetype != A
 trigger1 = ctrl
-trigger2 = movecontact
-;---------------------------------------------------------------------------
-; Explosive Wave
-[State -1, Explosive Wave]
+
+; Super Explosive Wave (In Air)
+[State -1, Super Explosive Wave (In Air)]
 type = ChangeState
-triggerall = var(2) = 4
-Triggerall = power >= 1000
-value = 31100
+triggerall = var(2) = 2
+Triggerall = power >= 1500
+value = 27102
 triggerall = command = "SPECIAL 2"
-Triggerall = statetype != A
+Triggerall = statetype = A
 trigger1 = ctrl
-trigger2 = movecontact
-;---------------------------------------------------------------------------
-; Super Explosive Wave
-[State -1, Super Explosive Wave]
-type = ChangeState
-triggerall = var(2) = 5
-Triggerall = power >= 1000
-value = 33100
-triggerall = command = "SPECIAL 2"
-Triggerall = statetype != A
-trigger1 = ctrl
-trigger2 = movecontact
-;---------------------------------------------------------------------------
-; Super Explosive Wave
-[State -1, Super Explosive Wave]
-type = ChangeState
-triggerall = var(2) = 6
-Triggerall = power >= 1000
-value = 35100
-triggerall = command = "SPECIAL 2"
-Triggerall = statetype != A
-trigger1 = ctrl
-trigger2 = movecontact
-;---------------------------------------------------------------------------
-; Double Garlick Gun
-[State -1, Double Garlick Gun]
-type = ChangeState
-triggerall = var(2) = 0
-Triggerall = power >= 1500
-value = 1200
-triggerall = command = "SPECIAL 3"
-Triggerall = statetype != A
-trigger1 = ctrl
-trigger2 = movecontact
 ;---------------------------------------------------------------------------
 ; Big Bang Attack
 [State -1, Big Bang Attack]
 type = ChangeState
-triggerall = var(2) > 0 && var(2) < 4
+triggerall = var(2) = 2
 Triggerall = power >= 1500
-value = 25200
+value = 27200
 triggerall = command = "SPECIAL 3"
 Triggerall = statetype != A
-trigger1 = ctrl
-trigger2 = movecontact
-;---------------------------------------------------------------------------
-; Big Bang Attack
-[State -1, Big Bang Attack]
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Big Bang Attack (Air)
+[State -1, Big Bang Attack (Air)]
 type = ChangeState
-triggerall = var(2) = 4
+triggerall = var(2) = 2
+Triggerall = power >= 1500
+value = 27202
+triggerall = command = "SPECIAL 3"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+;---------------------------------------------------------------------------
+; Impact Smash
+[State -1, Impact Smash]
+type = ChangeState
+triggerall = var(2) = 2
 Triggerall = power >= 1000
-value = 31200
-triggerall = command = "SPECIAL 6"
+Value = 27300
+Triggerall = command = "SPECIAL 4"
 Triggerall = statetype != A
-trigger1 = ctrl
-trigger2 = movecontact
-;---------------------------------------------------------------------------
-; Big Bang Attack
-[State -1, Big Bang Attack]
-type = ChangeState
-triggerall = var(2) = 5
-Triggerall = power >= 1500
-value = 33200
-triggerall = command = "SPECIAL 3"
-Triggerall = statetype != A
-trigger1 = ctrl
-trigger2 = movecontact
-;---------------------------------------------------------------------------
-; Big Bang Attack
-[State -1, Big Bang Attack]
-type = ChangeState
-triggerall = var(2) = 6
-Triggerall = power >= 1500
-value = 35200
-triggerall = command = "SPECIAL 3"
-Triggerall = statetype != A
-trigger1 = ctrl
-trigger2 = movecontact
-;---------------------------------------------------------------------------
-; Prince Pride
-[State -1, Price Pride]
-type = ChangeState
-triggerall = var(2) < 3
-triggerall = var(3) = 0
-Triggerall = power >= 1500
-value = 1300
-triggerall = command = "SPECIAL 4"
-trigger1 = ctrl
-;---------------------------------------------------------------------------
-; Wild Sense
-[State -1, Wild Sense]
-type = ChangeState
-triggerall = var(2) >= 3
-triggerall = var(4) = 0
-Triggerall = power >= 1500
-value = 33300
-triggerall = command = "SPECIAL 4"
-trigger1 = ctrl
-;---------------------------------------------------------------------------
-; Garlick Gun
-[State -1, Garlick Gun]
-type = ChangeState
-triggerall = var(2) = 0 || var(2) = 5
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Impact Smash (Air)
+[State -1, Impact Smash (Air)]
+Type = ChangeState
+triggerall = var(2) = 2
 Triggerall = power >= 1000
-value = 1400
-triggerall = command = "SPECIAL 5"
-Triggerall = statetype != A
-trigger1 = ctrl
-trigger2 = movecontact
+Value = 27303
+Triggerall = command = "SPECIAL 4"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
 ;---------------------------------------------------------------------------
 ; Final Flash
 [State -1, Final Flash]
 type = ChangeState
-triggerall = var(2) = 1
-Triggerall = power >= 1500
-value = 25400
-triggerall = command = "SPECIAL 5"
-Triggerall = statetype != A
-trigger1 = ctrl
-trigger2 = movecontact
-;---------------------------------------------------------------------------
-; Maxiumum Flasher
-[State -1, Maximum Flasher]
-type = ChangeState
 triggerall = var(2) = 2
-Triggerall = power >= 1000
+Triggerall = power >= 1500
 value = 27400
 triggerall = command = "SPECIAL 5"
 Triggerall = statetype != A
-trigger1 = ctrl
-trigger2 = movecontact
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Final Flash (Air)
+[State -1, Final Flash (Air)]
+type = ChangeState
+triggerall = var(2) = 2
+Triggerall = power >= 1500
+value = 27403
+triggerall = command = "SPECIAL 5"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
 ;---------------------------------------------------------------------------
-; Final Flash
-[State -1, Final Flash]
+; Super Energy Wave Volley
+[State -1, Super Energy Wave Volley]
+type = ChangeState
+Triggerall = power >= 1500
+triggerall = var(2) = 2
+value = 27500
+triggerall = command = "SPECIAL 6"
+Triggerall = statetype != A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Super Energy Wave Volley (Air)
+[State -1, Super Energy Wave Volley (Air)]
+type = ChangeState
+Triggerall = power >= 1500
+triggerall = var(2) = 2
+value = 27503
+triggerall = command = "SPECIAL 6"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+;===========================================================================
+; SUPER SAIYAN GOD
+;===========================================================================
+;SPECIALS:
+;===========================================================================
+; Burst Smash
+[State -1,Burst Smash]
 type = ChangeState
 triggerall = var(2) = 4
 Triggerall = power >= 1000
+Value = 31000
+Triggerall = command = "SPECIAL 1"
+Triggerall = statetype != A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Burst Smash (Air)
+[State -1,Burst Smash (Air)]
+Type = ChangeState
+triggerall = var(2) = 4
+Triggerall = power >= 1000
+Value = 31004
+Triggerall = command = "SPECIAL 1"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+;---------------------------------------------------------------------------
+; Burst Stinger
+[State -1,Burst Stinger]
+type = ChangeState
+triggerall = var(2) = 4
+Triggerall = power >= 1000
+Value = 31100
+Triggerall = command = "SPECIAL 2"
+Triggerall = statetype != A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Burst Stinger (Air)
+[State -1,Burst Stinger (Air)]
+Type = ChangeState
+triggerall = var(2) = 4
+Triggerall = power >= 1000
+Value = 31104
+Triggerall = command = "SPECIAL 2"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+;---------------------------------------------------------------------------
+; Raid Blast
+[State -1,Raid Blast]
+type = ChangeState
+triggerall = var(2) = 4
+Triggerall = power >= 1500
+Value = 31200
+Triggerall = command = "SPECIAL 3"
+Triggerall = statetype != A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Raid Blast (Air)
+[State -1,Raid Blast (Air)]
+Type = ChangeState
+triggerall = var(2) = 4
+Triggerall = power >= 1500
+Value = 31206
+Triggerall = command = "SPECIAL 3"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+;---------------------------------------------------------------------------
+; Blazing Attack
+[State -1,Blazing Attack]
+type = ChangeState
+triggerall = var(2) = 4
+Triggerall = power >= 1500
+Value = 31300
+Triggerall = command = "SPECIAL 4"
+Triggerall = statetype != A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Blazing Attack (Air)
+[State -1,Blazing Attack (Air)]
+Type = ChangeState
+triggerall = var(2) = 4
+Triggerall = power >= 1200
+Value = 31302
+Triggerall = command = "SPECIAL 4"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+;---------------------------------------------------------------------------
+; God Heat Flash
+[State -1,God Heat Flash]
+type = ChangeState
+triggerall = var(2) = 4
+Triggerall = power >= 1500
 value = 31400
 triggerall = command = "SPECIAL 5"
 Triggerall = statetype != A
-trigger1 = ctrl
-trigger2 = movecontact
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; God Heat Flash (Air)
+[State -1,God Heat Flash (Air)]
+type = ChangeState
+triggerall = var(2) = 4
+Triggerall = power >= 1500
+value = 31403
+triggerall = command = "SPECIAL 5"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
 ;---------------------------------------------------------------------------
-; Maxiumum Flasher
-[State -1, Maximum Flasher]
-type = Null;ChangeState
-triggerall = var(2) = 2
+; Air Blasts
+[State -1, Air Blasts]
+type = ChangeState
+Triggerall = power >= 1500
+triggerall = var(2) = 4
+value = 31500
+triggerall = command = "SPECIAL 6"
+Triggerall = statetype != A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Air Blasts (Air)
+[State -1, Air Blasts (Air)]
+type = ChangeState
+Triggerall = power >= 1500
+triggerall = var(2) = 4
+value = 31503
+triggerall = command = "SPECIAL 6"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+;===========================================================================
+; SUPER SAIYAN BLUE
+;===========================================================================
+;SPECIALS:
+;===========================================================================
+; Impact Breaker
+[State -1,Impact Breaker]
+type = ChangeState
+triggerall = var(2) = 5
 Triggerall = power >= 1000
-value = 32400
+Value = 33000
+Triggerall = command = "SPECIAL 1"
+Triggerall = statetype != A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Impact Breaker (Air)
+[State -1,Impact Breaker (Air)]
+Type = ChangeState
+triggerall = var(2) = 5
+Triggerall = power >= 1000
+Value = 33004
+Triggerall = command = "SPECIAL 1"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+;---------------------------------------------------------------------------
+; Burst Rush
+[State -1,Burst Rush]
+type = ChangeState
+triggerall = var(2) = 5
+Triggerall = power >= 1000
+Value = 33100
+Triggerall = command = "SPECIAL 2"
+Triggerall = statetype != A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Burst Rush (Air)
+[State -1,Burst Rush (Air)]
+Type = ChangeState
+triggerall = var(2) = 5
+Triggerall = power >= 1000
+Value = 33108
+Triggerall = command = "SPECIAL 2"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+;---------------------------------------------------------------------------
+; Super Dash Kick
+[State -1, Super Dash Kick]
+type = ChangeState
+triggerall = var(2) = 5
+Triggerall = power >= 1500
+Value = 33200
+Triggerall = command = "SPECIAL 3"
+Triggerall = statetype != A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Super Dash Kick (Air)
+[State -1, Super Dash Kick (Air)]
+Type = ChangeState
+triggerall = var(2) = 5
+Triggerall = power >= 1500
+Value = 33206
+Triggerall = command = "SPECIAL 3"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+;---------------------------------------------------------------------------
+; Super Energy Consecutive
+[State -1, Super Energy Consecutive]
+type = ChangeState
+Triggerall = power >= 1000
+triggerall = var(2) = 5
+value = 33300
+triggerall = command = "SPECIAL 4"
+Triggerall = statetype != A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Super Energy Consecutive (Air)
+[State -1, Super Energy Consecutive (Air)]
+type = ChangeState
+Triggerall = power >= 1000
+triggerall = var(2) = 5
+value = 33303
+triggerall = command = "SPECIAL 4"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+;---------------------------------------------------------------------------
+; Galick Gun
+[State -1, Galick Gun]
+type = ChangeState
+triggerall = var(2) = 5
+Triggerall = power >= 1500
+value = 33400
 triggerall = command = "SPECIAL 5"
 Triggerall = statetype != A
-trigger1 = ctrl
-trigger2 = movecontact
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Galick Gun (Air)
+[State -1, Galick Gun (Air)]
+type = ChangeState
+triggerall = var(2) = 5
+Triggerall = power >= 1500
+value = 33403
+triggerall = command = "SPECIAL 5"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+;---------------------------------------------------------------------------
+; Big Bang Attack
+[State -1, Big Bang Attack]
+type = ChangeState
+triggerall = var(2) = 5
+Triggerall = power >= 1500
+value = 33500
+triggerall = command = "SPECIAL 6"
+Triggerall = statetype != A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Big Bang Attack (Air)
+[State -1, Big Bang Attack (Air)]
+type = ChangeState
+triggerall = var(2) = 5
+Triggerall = power >= 1500
+value = 33502
+triggerall = command = "SPECIAL 6"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+;===========================================================================
+; SUPER SAIYAN BLUE EVOLUTION
+;===========================================================================
+;SPECIALS:
+;===========================================================================
+; Brutal Blow
+[State -1,Brutal Blow]
+type = ChangeState
+triggerall = var(2) = 6
+Triggerall = power >= 1000
+Value = 35000
+Triggerall = command = "SPECIAL 1"
+Triggerall = statetype != A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Brutal Blow (Air)
+[State -1,Brutal Blow (Air)]
+Type = ChangeState
+triggerall = var(2) = 6
+Triggerall = power >= 1000
+Value = 35003
+Triggerall = command = "SPECIAL 1"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+;---------------------------------------------------------------------------
+; God Impact Smash
+[State -1,God Impact Smash]
+type = ChangeState
+triggerall = var(2) = 6
+Triggerall = power >= 1000
+Value = 35100
+Triggerall = command = "SPECIAL 2"
+Triggerall = statetype != A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; God Impact Smash (Air)
+[State -1,God Impact Smash (Air)]
+Type = ChangeState
+triggerall = var(2) = 6
+Triggerall = power >= 1000
+Value = 35103
+Triggerall = command = "SPECIAL 2"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+;---------------------------------------------------------------------------
+; Flash Rush
+[State -1,Flash Rush]
+type = ChangeState
+triggerall = var(2) = 6
+Triggerall = power >= 1500
+Value = 35200
+Triggerall = command = "SPECIAL 3"
+Triggerall = statetype != A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Flash Rush (Air)
+[State -1,Flash Rush (Air)]
+Type = ChangeState
+triggerall = var(2) = 6
+Triggerall = power >= 1500
+Value = 35202
+Triggerall = command = "SPECIAL 3"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+;---------------------------------------------------------------------------
+; Burst of Ki
+[State -1,Burst of Ki]
+type = ChangeState
+triggerall = var(2) = 6
+Triggerall = power >= 1000
+Value = 35300
+Triggerall = command = "SPECIAL 4"
+Triggerall = statetype != A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Burst of Ki (Air)
+[State -1,Burst of Ki (Air)]
+Type = ChangeState
+triggerall = var(2) = 6
+Triggerall = power >= 1000
+Value = 35303
+Triggerall = command = "SPECIAL 4"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
 ;---------------------------------------------------------------------------
 ; Final Flash
-[State -1, Maximum Flasher]
+[State -1, Final Flash]
 type = ChangeState
 triggerall = var(2) = 6
 Triggerall = power >= 1500
 value = 35400
 triggerall = command = "SPECIAL 5"
 Triggerall = statetype != A
-trigger1 = ctrl
-trigger2 = movecontact
-;---------------------------------------------------------------------------
-; Maxiumum Flasher
-[State -1, Maximum Flasher]
-type = ChangeState
-triggerall = var(2) = 2
-Triggerall = power >= 1000
-value = 27400
-triggerall = command = "SPECIAL 5"
-Triggerall = statetype != A
-trigger1 = ctrl
-trigger2 = movecontact
-;---------------------------------------------------------------------------
-; Super Energy Wave Volley
-[State -1, Super Energy Wave Volley]
-type = ChangeState
-Triggerall = power >= 1000
-triggerall = var(2) < 4
-value = 1500
-triggerall = command = "SPECIAL 6"
-Triggerall = statetype != A
-trigger1 = ctrl
-trigger2 = movecontact
-;---------------------------------------------------------------------------
-; Super Energy Wave Volley
-[State -1, Super Energy Wave Volley]
-type = ChangeState
-Triggerall = power >= 1000
-triggerall = var(2) = 4
-value = 31500
-triggerall = command = "SPECIAL 3"
-Triggerall = statetype != A
-trigger1 = ctrl
-trigger2 = movecontact
-;---------------------------------------------------------------------------
-; Galick Crash
-[State -1, Galick Crash]
-type = ChangeState
-Triggerall = power >= 1000
-triggerall = var(2) = 5
-value = 33500
-triggerall = command = "SPECIAL 6"
-Triggerall = statetype != A
-trigger1 = ctrl
-trigger2 = movecontact
-;---------------------------------------------------------------------------
-; Big Bang Fireworks
-[State -1, Big Bang Fireworks]
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Final Flash (Air)
+[State -1, Final Flash (Air)]
 type = ChangeState
 triggerall = var(2) = 6
 Triggerall = power >= 1500
-value = ifelse(pos y < 0,35580,35500)
-triggerall = command = "SPECIAL 6"
-trigger1 = ctrl
-trigger2 = numhelper(700) > 0
-;===========================================================================
-;--------------------------------Ataques Normales---------------------------
+value = 35403
+triggerall = command = "SPECIAL 5"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
 ;---------------------------------------------------------------------------
-; SSBE
-[State -1, SSBE]
+; Meteor Blast Rush
+[State -1, Meteor Blast Rush]
 type = ChangeState
-triggerall = power >= 3000
+Triggerall = power >= 1500
+triggerall = var(2) = 6
+value = 35500
+triggerall = command = "SPECIAL 6"
+Triggerall = statetype != A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+; Meteor Blast Rush (Air)
+[State -1, Meteor Blast Rush (Air)]
+type = ChangeState
+Triggerall = power >= 1500
+triggerall = var(2) = 6
+value = 35503
+triggerall = command = "SPECIAL 6"
+Triggerall = statetype = A
+Trigger1 = ctrl
+Trigger2 = NumHelper(900) > 0
+
+;===========================================================================
+;TRANSFORMATION:
+;===========================================================================
+; BASE
+;---------------------------------------------------------------------------
+; Base To SSBE
+[State -1,Base To SSBE]
+type = ChangeState
+triggerall = power >= 1800
 triggerall = var(2) = 0
 Triggerall = var(3) = 0
-value = 1700
-triggerall = command = "x"
+value = 825
+triggerall = command = "holddown"
+triggerall = command = "y"
+triggerall = command = "z"
 Triggerall = statetype != A
 trigger1 = ctrl
 ;---------------------------------------------------------------------------
-; SSB
-[State -1, SSB]
+; Base To SSB
+[State -1,Base To SSB]
 type = ChangeState
-triggerall = power >= 599000-var(2)*1000
-triggerall = var(2) < 5
+triggerall = power >= 1600
+triggerall = var(2) = 0
 Triggerall = var(3) = 0
-value = 1800
+value = 820
+triggerall = command = "holdfwd"
 triggerall = command = "holddown"
-triggerall = command = "b"
-triggerall = ifelse(var(2)<4,command="holdfwd",1)
+triggerall = command = "z"
 Triggerall = statetype != A
 trigger1 = ctrl
 ;---------------------------------------------------------------------------
-; SSG
-[State -1, SS2]
+; Base To SSG
+[State -1,Base To SSG]
 type = ChangeState
-triggerall = power >= 99000-var(2)*1000
-triggerall = var(2) < 4
-;Triggerall = var(3) = 0
-value = 1900
-triggerall = command = "holddown"
-triggerall = command = "b"
-Triggerall = statetype != A
-trigger1 = ctrl
-;---------------------------------------------------------------------------
-; SS2
-[State -1, SS2]
-type = ChangeState
-triggerall = power >= 200000-var(2)*1000
-triggerall = var(2) < 2
+triggerall = power >= 1400
+triggerall = var(2) = 0
 Triggerall = var(3) = 0
-value = 800
+value = 815
+triggerall = command = "holdback"
 triggerall = command = "holddown"
-triggerall = command = "a"
-triggerall = ifelse(var(2)=0,command="holdfwd",1)
+triggerall = command = "z"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; Base To SS2
+[State -1, Base To SS2]
+type = ChangeState
+triggerall = power >= 1200
+triggerall = var(2) = 0
+Triggerall = var(3) = 0
+value = 810
+triggerall = command = "holddown"
+triggerall = command = "z"
 Triggerall = statetype != A
 trigger1 = ctrl
 ;---------------------------------------------------------------------------
 ; SS1
 [State -1, SS1]
 type = ChangeState
-triggerall = power >= 100000
+triggerall = power >= 1000
 triggerall = var(2) = 0
 Triggerall = var(3) = 0
-value = 700
-triggerall = command = "holddown"
-triggerall = command = "a"
+value = 800+random%2
+triggerall = command = "z"
 Triggerall = statetype != A
 trigger1 = ctrl
 ;---------------------------------------------------------------------------
@@ -859,9 +1782,91 @@ trigger1 = ctrl
 [State -1, SS1 Cancelar]
 type = ChangeState
 triggerall = var(2) = 1
-value = 705
+value = 805
 triggerall = command = "holddown"
 triggerall = command = "s"
+Triggerall = statetype != A
+trigger1 = ctrl
+;===========================================================================
+; SUPER SAIYAN
+;---------------------------------------------------------------------------
+; SS To SSBE
+[State -1,SS To SSBE]
+type = ChangeState
+triggerall = power >= 1600
+triggerall = var(2) = 1
+value = 2820
+triggerall = command = "holdfwd"
+triggerall = command = "holddown"
+triggerall = command = "z"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; SS To SSB
+[State -1, SS To SSB]
+type = ChangeState
+triggerall = power >= 1400
+triggerall = var(2) = 1
+value = 2815
+triggerall = command = "holdback"
+triggerall = command = "holddown"
+triggerall = command = "z"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; SS To SSG
+[State -1, SS To SSG]
+type = ChangeState
+triggerall = power >= 1200
+triggerall = var(2) = 1
+value = 2810
+triggerall = command = "holddown"
+triggerall = command = "z"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; SS2
+[State -1, SS2]
+type = ChangeState
+triggerall = power >= 1000
+triggerall = var(2) = 1
+value = 2800
+triggerall = command = "z"
+Triggerall = statetype != A
+trigger1 = ctrl
+;===========================================================================
+; SUPER SAIYAN  2
+;---------------------------------------------------------------------------
+; SS2 To SSE
+[State -1,Base To SSG]
+type = ChangeState
+triggerall = power >= 1400
+triggerall = var(2) = 2
+value = 11815
+triggerall = command = "holdback"
+triggerall = command = "holddown"
+triggerall = command = "z"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; SS2 To SSB
+[State -1, SS2 To SSB]
+type = ChangeState
+triggerall = power >= 1200
+triggerall = var(2) = 2
+value = 11810
+triggerall = command = "holddown"
+triggerall = command = "z"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; SSG
+[State -1, SSG]
+type = ChangeState
+triggerall = power >= 1000
+triggerall = var(2) = 2
+value = 11800
+triggerall = command = "z"
 Triggerall = statetype != A
 trigger1 = ctrl
 ;---------------------------------------------------------------------------
@@ -869,100 +1874,145 @@ trigger1 = ctrl
 [State -1, SS2 Cancelar]
 type = ChangeState
 triggerall = var(2) = 2
-value = 805
+value = 2805
 triggerall = command = "holddown"
 triggerall = command = "s"
+Triggerall = statetype != A
+trigger1 = ctrl
+;===========================================================================
+; SUPER SAIYAN GOD
+;---------------------------------------------------------------------------
+; SSG To SSBE
+[State -1, SSG To SSBE]
+type = ChangeState
+triggerall = power >= 1200
+triggerall = var(2) = 4
+value = 15810
+triggerall = command = "holddown"
+triggerall = command = "z"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; SSG To SSB
+[State -1, SSG To SSB]
+type = ChangeState
+triggerall = power >= 1000
+triggerall = var(2) = 4
+value = 15800
+triggerall = command = "z"
 Triggerall = statetype != A
 trigger1 = ctrl
 ;---------------------------------------------------------------------------
 ; SSG Cancelar
-[State -1, SS1 Cancelar]
+[State -1, SSG Cancelar]
 type = ChangeState
 triggerall = var(2) = 4
-;triggerall = var(3) = 0
-value = 1905
+value = 15805
 triggerall = command = "holddown"
 triggerall = command = "s"
 Triggerall = statetype != A
-trigger1 = ctrl 
+trigger1 = ctrl
+;===========================================================================
+; SUPER SAIYAN BLUE
+;---------------------------------------------------------------------------
+; SSB To SSBE
+[State -1, SSB To SSBE]
+type = ChangeState
+triggerall = power >= 1200
+triggerall = var(2) = 5
+value = 17800
+triggerall = command = "z"
+Triggerall = statetype != A
+trigger1 = ctrl
 ;---------------------------------------------------------------------------
 ; SSB Cancelar
-[State -1, SS1 Cancelar]
+[State -1, SSB Cancelar]
 type = ChangeState
 triggerall = var(2) = 5
-;triggerall = var(3) = 0
-value = 1805
+value = 17805
 triggerall = command = "holddown"
 triggerall = command = "s"
 Triggerall = statetype != A
 trigger1 = ctrl 
+;===========================================================================
+; SUPER SAIYAN BLUE EVOLUTION
 ;---------------------------------------------------------------------------
 ; SSBE Cancelar
-[State -1, SS1 Cancelar]
+[State -1, SSBE Cancelar]
 type = ChangeState
 triggerall = var(2) = 6
-;triggerall = var(3) = 0
-value = 1705
+value = 19805
 triggerall = command = "holddown"
 triggerall = command = "s"
 Triggerall = statetype != A
 trigger1 = ctrl 
+;===========================================================================
+;--------------------------------Ataques Normales---------------------------
 ;---------------------------------------------------------------------------
-; A BASE || SS1
-[State -1, A BASE || SS1]
+;===========================================================================
+; BASE
+;---------------------------------------------------------------------------
+; Down + A
+[State -1, Down + A]
 type = ChangeState
-value = 200+ifelse(var(2)>1,var(11),0)
+triggerall = var(2) = 0
+value = 280
+triggerall = Command = "holddown"
+triggerall = Command = "a"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; A
+[State -1, A]
+type = ChangeState
+triggerall = var(2) = 0
+value = 200
 triggerall = command = "a"
 Triggerall = statetype != A
 trigger1 = ctrl
 ;---------------------------------------------------------------------------
+; Down + B
+[State -1, Down + B]
+type = ChangeState
+triggerall = var(2) = 0
+value = 380
+triggerall = Command = "holddown"
+triggerall = Command = "b"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
 ; B
 [State -1, B]
 type = ChangeState
+triggerall = var(2) = 0
 value = 300
-triggerall = var(2) != 4 && var(2) != 6
 triggerall = command = "b"
 Triggerall = statetype != A
 trigger1 = ctrl
 ;---------------------------------------------------------------------------
-; B
-[State -1, B]
+; Down + C
+[State -1, Down + C]
 type = ChangeState
-value = 15300
-triggerall = var(2) = 4
-triggerall = command = "b"
+triggerall = var(2) = 0
+triggerall = power >= 250
+value = 470
+triggerall = Command = "holddown"
+triggerall = Command = "c"
 Triggerall = statetype != A
 trigger1 = ctrl
 ;---------------------------------------------------------------------------
-; B
-[State -1, B]
+; Down + A Aire
+[State -1, Down + A Aire]
 type = ChangeState
-value = 19300
-triggerall = var(2) = 6
-triggerall = command = "b"
-Triggerall = statetype != A
+triggerall = var(2) = 0
+value = 605
+triggerall = Command = "holddown"
+triggerall = Command = "a"
+Triggerall = statetype = A
 trigger1 = ctrl
 ;---------------------------------------------------------------------------
-; C
-[State -1, C]
-type = ChangeState
-value = 400
-triggerall = power >= 200
-triggerall = command = "c"
-Triggerall = statetype != A
-trigger1 = ctrl
-;---------------------------------------------------------------------------
-; Power Charge
-[State -1, Power Charge]
-type = ChangeState
-Triggerall = power < 3000
-value = 500
-triggerall = command = "s"
-Triggerall = statetype != A
-trigger1 = ctrl
-;---------------------------------------------------------------------------
-; A Aire BASE
-[State -1, A Aire BASE]
+; A Aire
+[State -1, A Aire]
 type = ChangeState
 triggerall = var(2) = 0
 value = 600
@@ -970,53 +2020,218 @@ triggerall = command = "a"
 Triggerall = statetype = A
 trigger1 = ctrl
 ;---------------------------------------------------------------------------
-; A Aire SS1 || SS2
-[State -1, A Aire SS1 || SS2]
+; Down + B Aire
+[State -1, Down + B Aire]
 type = ChangeState
-triggerall = var(2) > 0 && var(2) < 4
-value = 2600
-triggerall = command = "a"
+triggerall = var(2) = 0
+value = 615
+triggerall = Command = "holddown"
+triggerall = Command = "b"
 Triggerall = statetype = A
 trigger1 = ctrl
 ;---------------------------------------------------------------------------
-; A Aire SS1
-[State -1, A Aire SSG]
+; B Aire
+[State -1, B Aire]
 type = ChangeState
-triggerall = var(2) = 4
-value = 15600
-triggerall = command = "a"
-Triggerall = statetype = A
-trigger1 = ctrl
-;---------------------------------------------------------------------------
-; A Aire SS2
-[State -1, A Aire SSB]
-type = ChangeState
-triggerall = var(2) = 5
-value = 17600
-triggerall = command = "a"
-Triggerall = statetype = A
-trigger1 = ctrl
-;---------------------------------------------------------------------------
-; A Aire SSB2
-[State -1, A Aire SSB]
-type = ChangeState
-triggerall = var(2) = 6
-value = 19600
-triggerall = command = "a"
-Triggerall = statetype = A
-trigger1 = ctrl
-;---------------------------------------------------------------------------
-; B Aire BASE
-[State -1, B Aire BASE]
-type = ChangeState
-triggerall = var(2) < 2
+triggerall = var(2) = 0
 value = 610
 triggerall = command = "b"
 Triggerall = statetype = A
 trigger1 = ctrl
 ;---------------------------------------------------------------------------
-; B Aire BASE
-[State -1, B Aire BASE]
+; Down + C Aire
+[State -1, Down + C Aire]
+type = ChangeState
+triggerall = var(2) = 0
+triggerall = power >= 250
+value = 640
+triggerall = Command = "holddown"
+triggerall = Command = "c"
+Triggerall = statetype = A
+trigger1 = ctrl
+;===========================================================================
+; SUPER SAIYAN
+;---------------------------------------------------------------------------
+; Down + A
+[State -1, Down + A]
+type = ChangeState
+triggerall = var(2) = 1
+value = 2280
+triggerall = Command = "holddown"
+triggerall = Command = "a"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; A
+[State -1, A]
+type = ChangeState
+triggerall = var(2) = 1
+value = 2200
+triggerall = command = "a"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; Down + B
+[State -1, Down + B]
+type = ChangeState
+triggerall = var(2) = 1
+value = 2380
+triggerall = Command = "holddown"
+triggerall = Command = "b"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; B
+[State -1, B]
+type = ChangeState
+triggerall = var(2) = 1
+value = 2300
+triggerall = command = "b"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; Down + C
+[State -1, Down + C]
+type = ChangeState
+triggerall = var(2) = 1
+triggerall = power >= 250
+value = 2470
+triggerall = Command = "holddown"
+triggerall = Command = "c"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; Down + A Aire
+[State -1, Down + A Aire]
+type = ChangeState
+triggerall = var(2) = 1
+value = 2605
+triggerall = Command = "holddown"
+triggerall = Command = "a"
+Triggerall = statetype = A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; A Aire
+[State -1, A Aire]
+type = ChangeState
+triggerall = var(2) = 1
+value = 2600
+triggerall = command = "a"
+Triggerall = statetype = A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; Down + B Aire
+[State -1, Down + B Aire]
+type = ChangeState
+triggerall = var(2) = 1
+value = 2615
+triggerall = Command = "holddown"
+triggerall = Command = "b"
+Triggerall = statetype = A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; B Aire
+[State -1, B Aire]
+type = ChangeState
+triggerall = var(2) = 1
+value = 2610
+triggerall = command = "b"
+Triggerall = statetype = A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; Down + C Aire
+[State -1, Down + C Aire]
+type = ChangeState
+triggerall = var(2) = 1
+triggerall = power >= 250
+value = 2640
+triggerall = Command = "holddown"
+triggerall = Command = "c"
+Triggerall = statetype = A
+trigger1 = ctrl
+;===========================================================================
+; SUPER SAIYAN  2
+;---------------------------------------------------------------------------
+; Down + A
+[State -1, Down + A]
+type = ChangeState
+triggerall = var(2) = 2
+value = 11280
+triggerall = Command = "holddown"
+triggerall = Command = "a"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; A
+[State -1, A]
+type = ChangeState
+triggerall = var(2) = 2
+value = 11200
+triggerall = command = "a"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; Down + B
+[State -1, Down + B]
+type = ChangeState
+triggerall = var(2) = 2
+value = 11380
+triggerall = Command = "holddown"
+triggerall = Command = "b"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; B
+[State -1, B]
+type = ChangeState
+triggerall = var(2) = 2
+value = 11300
+triggerall = command = "b"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; Down + C
+[State -1, Down + C]
+type = ChangeState
+triggerall = var(2) = 2
+triggerall = power >= 300
+value = 11470
+triggerall = Command = "holddown"
+triggerall = Command = "c"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; Down + A Aire
+[State -1, Down + A Aire]
+type = ChangeState
+triggerall = var(2) = 2
+value = 11605
+triggerall = Command = "holddown"
+triggerall = Command = "a"
+Triggerall = statetype = A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; A Aire
+[State -1, A Aire]
+type = ChangeState
+triggerall = var(2) = 2
+value = 11600
+triggerall = command = "a"
+Triggerall = statetype = A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; Down + B Aire
+[State -1, Down + B Aire]
+type = ChangeState
+triggerall = var(2) = 2
+value = 11615
+triggerall = Command = "holddown"
+triggerall = Command = "b"
+Triggerall = statetype = A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; B Aire
+[State -1, B Aire]
 type = ChangeState
 triggerall = var(2) = 2
 value = 11610
@@ -1024,8 +2239,99 @@ triggerall = command = "b"
 Triggerall = statetype = A
 trigger1 = ctrl
 ;---------------------------------------------------------------------------
-; B Aire SS1
-[State -1, B Aire SS1]
+; Down + C Aire
+[State -1, Down + C Aire]
+type = ChangeState
+triggerall = var(2) = 2
+triggerall = power >= 300
+value = 11640
+triggerall = Command = "holddown"
+triggerall = Command = "c"
+Triggerall = statetype = A
+trigger1 = ctrl
+;===========================================================================
+; SUPER SAIYAN GOD
+;---------------------------------------------------------------------------
+; Down + A
+[State -1, Down + A]
+type = ChangeState
+triggerall = var(2) = 4
+value = 15280
+triggerall = Command = "holddown"
+triggerall = Command = "a"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; A
+[State -1, A]
+type = ChangeState
+triggerall = var(2) = 4
+value = 15200
+triggerall = command = "a"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; Down + B
+[State -1, Down + B]
+type = ChangeState
+triggerall = var(2) = 4
+value = 15380
+triggerall = Command = "holddown"
+triggerall = Command = "b"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; B
+[State -1, B]
+type = ChangeState
+triggerall = var(2) = 4
+value = 15300
+triggerall = command = "b"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; Down + C
+[State -1, Down + C]
+type = ChangeState
+triggerall = var(2) = 4
+triggerall = power >= 400
+value = 15470
+triggerall = Command = "holddown"
+triggerall = Command = "c"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; Down + A Aire
+[State -1, Down + A Aire]
+type = ChangeState
+triggerall = var(2) = 4
+value = 15605
+triggerall = Command = "holddown"
+triggerall = Command = "a"
+Triggerall = statetype = A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; A Aire
+[State -1, A Aire]
+type = ChangeState
+triggerall = var(2) = 4
+value = 15600
+triggerall = command = "a"
+Triggerall = statetype = A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; Down + B Aire
+[State -1, Down + B Aire]
+type = ChangeState
+triggerall = var(2) = 4
+value = 15615
+triggerall = Command = "holddown"
+triggerall = Command = "b"
+Triggerall = statetype = A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; B Aire
+[State -1, B Aire]
 type = ChangeState
 triggerall = var(2) = 4
 value = 15610
@@ -1033,8 +2339,99 @@ triggerall = command = "b"
 Triggerall = statetype = A
 trigger1 = ctrl
 ;---------------------------------------------------------------------------
-; B Aire SS2
-[State -1, B Aire SS2]
+; Down + C Aire
+[State -1, Down + C Aire]
+type = ChangeState
+triggerall = var(2) = 4
+triggerall = power >= 400
+value = 15640
+triggerall = Command = "holddown"
+triggerall = Command = "c"
+Triggerall = statetype = A
+trigger1 = ctrl
+;===========================================================================
+; SUPER SAIYAN BLUE
+;---------------------------------------------------------------------------
+; Down + A
+[State -1, Down + A]
+type = ChangeState
+triggerall = var(2) = 5
+value = 17280
+triggerall = Command = "holddown"
+triggerall = Command = "a"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; A
+[State -1, A]
+type = ChangeState
+triggerall = var(2) = 5
+value = 17200
+triggerall = command = "a"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; Down + B
+[State -1, Down + B]
+type = ChangeState
+triggerall = var(2) = 5
+value = 17380
+triggerall = Command = "holddown"
+triggerall = Command = "b"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; B
+[State -1, B]
+type = ChangeState
+triggerall = var(2) = 5
+value = 17300
+triggerall = command = "b"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; Down + C
+[State -1, Down + C]
+type = ChangeState
+triggerall = var(2) = 5
+triggerall = power >= 250
+value = 17470
+triggerall = Command = "holddown"
+triggerall = Command = "c"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; Down + A Aire
+[State -1, Down + A Aire]
+type = ChangeState
+triggerall = var(2) = 5
+value = 17605
+triggerall = Command = "holddown"
+triggerall = Command = "a"
+Triggerall = statetype = A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; A Aire
+[State -1, A Aire]
+type = ChangeState
+triggerall = var(2) = 5
+value = 17600
+triggerall = command = "a"
+Triggerall = statetype = A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; Down + B Aire
+[State -1, Down + B Aire]
+type = ChangeState
+triggerall = var(2) = 5
+value = 17615
+triggerall = Command = "holddown"
+triggerall = Command = "b"
+Triggerall = statetype = A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; B Aire
+[State -1, B Aire]
 type = ChangeState
 triggerall = var(2) = 5
 value = 17610
@@ -1042,8 +2439,100 @@ triggerall = command = "b"
 Triggerall = statetype = A
 trigger1 = ctrl
 ;---------------------------------------------------------------------------
-; B Aire SSB2
-[State -1, B Aire SSB2]
+; Down + C Aire
+[State -1, Down + C Aire]
+type = ChangeState
+triggerall = var(2) = 5
+triggerall = power >= 250
+value = 17640
+triggerall = Command = "holddown"
+triggerall = Command = "c"
+Triggerall = statetype = A
+trigger1 = ctrl
+;===========================================================================
+; SUPER SAIYAN BLUE EVOLUTION
+;---------------------------------------------------------------------------
+; Down + A
+[State -1, Down + A]
+type = ChangeState
+triggerall = var(2) = 6
+value = 19280
+triggerall = Command = "holddown"
+triggerall = Command = "a"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; A
+[State -1, A]
+type = ChangeState
+triggerall = var(2) = 6
+value = 19200
+triggerall = command = "a"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; Down + B
+[State -1, Down + B]
+type = ChangeState
+triggerall = var(2) = 6
+Triggerall = Power >= 300
+value = 19380
+triggerall = Command = "holddown"
+triggerall = Command = "b"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; B
+[State -1, B]
+type = ChangeState
+triggerall = var(2) = 6
+value = 19300
+triggerall = command = "b"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; Down + C
+[State -1, Down + C]
+type = ChangeState
+triggerall = var(2) = 6
+triggerall = power >= 400
+value = 19470
+triggerall = Command = "holddown"
+triggerall = Command = "c"
+Triggerall = statetype != A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; Down + A Aire
+[State -1, Down + A Aire]
+type = ChangeState
+triggerall = var(2) = 6
+value = 19605
+triggerall = Command = "holddown"
+triggerall = Command = "a"
+Triggerall = statetype = A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; A Aire
+[State -1, A Aire]
+type = ChangeState
+triggerall = var(2) = 6
+value = 19600
+triggerall = command = "a"
+Triggerall = statetype = A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; Down + B Aire
+[State -1, Down + B Aire]
+type = ChangeState
+triggerall = var(2) = 6
+value = 19615
+triggerall = Command = "holddown"
+triggerall = Command = "b"
+Triggerall = statetype = A
+trigger1 = ctrl
+;---------------------------------------------------------------------------
+; B Aire
+[State -1, B Aire]
 type = ChangeState
 triggerall = var(2) = 6
 value = 19610
@@ -1051,11 +2540,52 @@ triggerall = command = "b"
 Triggerall = statetype = A
 trigger1 = ctrl
 ;---------------------------------------------------------------------------
-; C Aire
-[State -1, C Aire]
+; Down + C Aire
+[State -1, Down + C Aire]
 type = ChangeState
-value = 620
-triggerall = power >= 200
-triggerall = command = "c"
+triggerall = var(2) = 6
+triggerall = power >= 400
+value = 19640
+triggerall = Command = "holddown"
+triggerall = Command = "c"
 Triggerall = statetype = A
 trigger1 = ctrl
+;===========================================================================
+; CODING FOR ALL VAR	
+;===========================================================================
+;---------------------------------------------------------------------------
+; C
+[State -1, C]
+Type = ChangeState
+Value = 400
+TriggerAll = Power >= 200
+TriggerAll = Command = "c"
+TriggerAll = StateType != A
+Trigger1 = Ctrl
+;---------------------------------------------------------------------------
+; Power Charge
+[State -1, Power Charge]
+Type = ChangeState
+TriggerAll = Power < 3000
+Value = 500
+TriggerAll = Command = "s"
+TriggerAll = StateType != A
+Trigger1 = Ctrl
+;---------------------------------------------------------------------------
+; C Aire
+[State -1, C Aire]
+Type = ChangeState
+Value = 620
+Triggerall = Power >= 200
+Triggerall = Command = "c"
+Triggerall = StateType = A
+Trigger1 = Ctrl
+;---------------------------------------------------------------------------
+; Super Dash
+[State -1, Super Dash]
+Type = ChangeState
+Value = 750
+Triggerall = NumHelper(780) = 0
+Triggerall = Power >= 200
+Triggerall = Command = "y"
+Trigger1 = Ctrl

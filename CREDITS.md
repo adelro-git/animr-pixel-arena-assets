@@ -3,7 +3,7 @@
 | Folder | Character | Credits (from the files) | Source pack |
 |---|---|---|---|
 | `mugen/chars/Goku` | Son Goku (JUS style; base, SSJ, SSJ2, SSJ3, God, Blue, Ultra Instinct) | Made by Shiruzato/Mythos; `.def` credits Mikel8888 | DuckSaucc "Mugen Chars", `Goku.zip` — https://ducksaucc.itch.io/mugen |
-| `mugen/chars/Vegeta` | Vegeta (JUS style; base, SSJ, SSJ2, God, Blue, Blue Evolved) | Made by Shiruzato/Mythos; `.def` credits Mikel8888. Sprites by AAgus (http://aagus.deviantart.com/) | DuckSaucc "Mugen Chars", `Yuno.zip` — https://ducksaucc.itch.io/mugen |
+| `mugen/chars/Vegeta` | Vegeta (base, SSJ / Super Vegeta, SSJ2, God, Blue, Blue Evolved; replaced 2026-11-22) | `.def` author "Micheal2200", after Mikel8888 (versiondate 15/11/2021). `Vegeta.sff` is stored with Git LFS (117 MB) | Jump Force Mugen V10, `chars/Vegeta` |
 | `mugen/chars/Gojo Satoru` | Gojo Satoru | JOEYJOSTAR | DuckSaucc "Mugen Chars", `Goku.zip` — https://ducksaucc.itch.io/mugen |
 | `mugen/chars/Tanjiro` | Tanjiro Kamado | InSeph; original character by PetaMynx | Demon Slayer MUGEN (reupload), https://tanjiro-kamabuka.itch.io/demon-slayer-mugen |
 | `mugen/chars/Naruto` | Naruto Uzumaki (Kurama / Ashura-mode set; forms use the 2000+ animation range) | Mikel8888 | DuckSaucc `Piccolo.zip` — https://ducksaucc.itch.io/mugen |
